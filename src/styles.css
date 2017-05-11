@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #369;
+    font-size: 250%;
+}
+
+.dropdown-menu {
+    list-style-type: none;
+}
+
+.dropdown-item a {
+    text-decoration: none;
+    color: #369;
+}
+
+.dropdown-toggle {
+    background-color: #369;
+    color: #fff;
+    width: 250px;
+}

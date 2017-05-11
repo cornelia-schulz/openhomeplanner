@@ -1,0 +1,26 @@
+
+.search {
+    display: flex;
+}
+
+.selector { 
+    width: 30%;
+}
+
+.search-selector {
+    width: 100%;
+}
+
+.btn {
+    background-color: #369;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.no-style {
+    text-decoration: none;
+    list-style-type: none;
+}

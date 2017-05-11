@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <h1>{{title}}</h1>
+    <region-search-box></region-search-box>
+  `
+  
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Planner';
 }

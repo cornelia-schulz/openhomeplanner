@@ -1,0 +1,20 @@
+<div class="search">
+<fieldset class="selector">
+  <label>Region:</label>
+  <select class="search-selector" [(ngModel)]="selectedRegion"(change)="getDistricts($event)" >
+    <option *ngFor="let region of regions" [ngValue]="region">{{region.name}}</option>
+  </select>
+</fieldset>
+<fieldset class="selector">
+  <label>District:</label>
+  <select disabled class="search-selector" [(ngModel)]="selectedDistrict" (change)="getSuburbs($event)">
+    <option *ngFor="let district of districts" [ngValue]="district">{{district.name}}</option>
+  </select>
+</fieldset>
+<fieldset class="selector">
+  <label>Suburb:</label><br />
+  <ss-multiselect-dropdown disabled class="search-selector" [options]="suburbOptions" [texts]="suburbTexts" [settings]="suburbListSettings" [(ngModel)]="selectedSuburbs"(ngModelChange)="getOptions($event)">
+    <!--<option *ngFor="let suburb of suburbs" [ngValue]="suburb">{{suburb.name}}</option>-->
+  </ss-multiselect-dropdown>
+</fieldset>
+</div>
