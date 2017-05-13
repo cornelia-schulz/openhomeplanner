@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-root',
   template: `
     <h1>{{title}}</h1>
-    <img src="./images/howick.jpg" alt="howick" />
+    <img class="banner" src="/images/howick.jpg" alt="howick">
     <region-search-box></region-search-box>
     <rooms-price-search-box></rooms-price-search-box>
   `
@@ -13,4 +13,5 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
   title = 'Planner';
+
 }

@@ -17,6 +17,10 @@ h1 {
     font-size: 250%;
 }
 
+.banner {
+    width: 100%;
+}
+
 .selector {
     margin: 0;
     width: 239.462px;
