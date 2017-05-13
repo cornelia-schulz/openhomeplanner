@@ -1,16 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     font-family: 'Open Sans', sans-serif;
+    background-color: #369;
+    padding-top: 0; 
 }
 
 .container {
     width: 800px;
     margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
 }
 
 h1 {
     color: #369;
     font-size: 250%;
+}
+
+.selector {
+    margin: 0;
+    width: 239.462px;
+    border: none;
 }
 
 .dropdown-menu {
@@ -25,5 +35,5 @@ h1 {
 .dropdown-toggle {
     background-color: #369;
     color: #fff;
-    width: 250px;
+    width: 235px;
 }

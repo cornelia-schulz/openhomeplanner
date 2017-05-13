@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-root',
   template: `
     <h1>{{title}}</h1>
+    <img src="./images/howick.jpg" alt="howick" />
     <region-search-box></region-search-box>
     <rooms-price-search-box></rooms-price-search-box>
   `
