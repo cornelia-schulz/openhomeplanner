@@ -3,7 +3,6 @@ import { Region } from './model';
 import { District } from './model';
 import { Suburb } from './model';
 import { DataService } from './data.service';
-import { IDropdownItem } from 'ng2-dropdown-multiselect';
 import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
 import { IMultiSelectTexts }  from 'angular-2-dropdown-multiselect';
 import { IMultiSelectSettings } from 'angular-2-dropdown-multiselect';
@@ -24,10 +23,10 @@ export class RegionSearchBoxComponent implements OnInit{
     suburb: Suburb;
     selectedRegion = null;
     selectedDistrict = null;
-    selectedSuburbs: IMultiSelectOption[];
-    id: any;
-    optionsModel: number[];
+    selectedSuburbs: number[];
     suburbOptions: IMultiSelectOption[];
+    districtsDisabled: boolean;
+    suburbsDisabled: boolean;
     
 
 
@@ -53,15 +52,14 @@ export class RegionSearchBoxComponent implements OnInit{
 
 ngOnInit(){
   this.getRegions();
-  this.suburbOptions = [
-            
-        ];
+  this.suburbOptions = [];
+  this.districtsDisabled = true;
+  this.suburbsDisabled = true;
 }
 
 getRegions(){
   this.dataService.getRegions().subscribe(regs => {
     this.regions = regs;
-    //console.log(this.regions);
   }, (errorMsg: string) => {
     alert(errorMsg);
   });
@@ -69,26 +67,28 @@ getRegions(){
 
 getDistricts(event:Event):void{
   this.region = this.selectedRegion;
-  //console.log(this.region);
   this.districts = this.region.district;
+  this.districtsDisabled = false;
 }
 
 getSuburbs(event:Event):void{
   this.district = this.selectedDistrict;
   this.suburbs = this.district.suburb;
-  console.log(this.suburbs.length);
   console.log(this.suburbs[0].name);
 
   for(var i = 0; i < this.suburbs.length; i++){
     this.suburbOptions.push({id: i, name: this.suburbs[i].name})
   }
   console.log(this.suburbOptions[0])
-  
+  this.suburbsDisabled = false;
 }
 
-getOptions(){
-  console.log(this.optionsModel);
-  console.log(this.selectedSuburbs)
+getSelectedSuburbs(){
+  console.log("selected suburbs: " + this.selectedSuburbs);
+  for(var i = 0; i < this.selectedSuburbs.length; i++){
+    //
+  }
 }
+
 
 }

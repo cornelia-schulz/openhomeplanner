@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <h1>{{title}}</h1>
     <region-search-box></region-search-box>
+    <rooms-price-search-box></rooms-price-search-box>
   `
   
 })

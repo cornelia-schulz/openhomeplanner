@@ -1,10 +1,10 @@
 
-.search {
+.region-search {
     display: flex;
 }
 
 .selector { 
-    width: 30%;
+    width: 33%;
 }
 
 .search-selector {

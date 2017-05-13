@@ -1,0 +1,38 @@
+<div class="room-price-search">
+<fieldset class="selector">
+  <label>Bedrooms:</label><br/>
+  <select class="search-selector" [(ngModel)]="minBedrooms" (change)="getMinBedrooms($event)" >
+    <option value="" disabled hidden [value]="any">Any</option>
+    <option *ngFor="let bedroom of bedroomOptions" [ngValue]="bedroom" [selected]="bedroom == 'Any'">{{bedroom}}</option>
+  </select>
+  to
+  <select class="search-selector" [(ngModel)]="maxBedrooms" (change)="getMaxBedrooms($event)" >
+      <option value="" disabled hidden [value]="any">Any</option>
+    <option *ngFor="let bedroom of bedroomOptions" [ngValue]="bedroom">{{bedroom}}</option>
+  </select>
+</fieldset>
+<fieldset class="selector">
+  <label>Bathrooms:</label><br/>
+  <select class="search-selector" [(ngModel)]="minBathrooms" (change)="getMinBathrooms($event)">
+      <option value="" disabled hidden [value]="any">Any</option>
+    <option *ngFor="let bathroom of bathroomOptions" [ngValue]="bathroom">{{bathroom}}</option>
+  </select>
+  to
+  <select class="search-selector" [(ngModel)]="maxBathrooms"  (change)="getMaxBathrooms($event)">
+      <option value="" disabled hidden [value]="any">Any</option>
+    <option *ngFor="let bathroom of bathroomOptions" [ngValue]="bathroom">{{bathroom}}</option>
+  </select>
+</fieldset>
+<fieldset class="selector">
+  <label>Price:</label><br />
+  <select class="search-selector" [(ngModel)]="minPrice" (change)="getMinPrice($event)">
+      <option value="" disabled hidden [value]="any">Any</option>
+    <option *ngFor="let price of priceOptions" [ngValue]="price">{{price | currency:'NZD':true:'1.2-2'}}</option>
+  </select>
+  to
+  <select class="search-selector" [(ngModel)]="maxPrice" (change)="getMaxPrice($event)">
+      <option value="" disabled hidden [value]="any">Any</option>
+    <option *ngFor="let price of priceOptions" [ngValue]="price">{{price | currency:'NZD':true:'1.2-2'}}</option>
+  </select>
+</fieldset>
+</div>

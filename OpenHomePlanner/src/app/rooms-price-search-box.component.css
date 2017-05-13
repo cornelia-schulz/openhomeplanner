@@ -1,0 +1,12 @@
+
+.room-price-search {
+    display: flex;
+}
+
+.selector { 
+    width: 33%;
+}
+
+.search-selector {
+    width: 44%;
+}

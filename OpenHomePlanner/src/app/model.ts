@@ -20,3 +20,11 @@ export class Address {
   postcode: number;
   suburb: string;
 }
+
+export class Property {
+  id: number;
+  bedrooms: number;
+  bathrooms: number;
+  price: number;
+  address: Address;
+}
