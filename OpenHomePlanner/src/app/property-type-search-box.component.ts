@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
+import { IMultiSelectTexts }  from 'angular-2-dropdown-multiselect';
+import { IMultiSelectSettings } from 'angular-2-dropdown-multiselect';
 import { DataService } from './data.service';
 
 @Component({
@@ -10,12 +12,36 @@ import { DataService } from './data.service';
 })
 
 export class PropertyTypeSearchBoxComponent implements OnInit{
-    
+    propertyTypeOptions: IMultiSelectOption[];
+    selectedPropertyTypes: number[];
 
     //constructor(private dataService: DataService) {}
-
-    ngOnInit(){
-
+    propertyTypeTexts: IMultiSelectTexts = {
+        checkAll: 'Select all',
+        uncheckAll: 'Deselect all',
+        checked: 'property type selected',
+        checkedPlural: 'property types selected',
+        defaultTitle: 'Select a Property Type',
+        allSelected: 'All selected'
+    };
+    propertyTypeListSettings: IMultiSelectSettings = {
+        enableSearch: false,
+        buttonClasses: 'btn btn-primary btn-block',
+        dynamicTitleMaxItems: 3,
+        displayAllSelectedText: true
     }
 
+    ngOnInit(){
+      this.propertyTypeOptions = [{ id: 1, name: 'Apartment'},
+                                  {id: 2, name: 'House'},
+                                   {id: 3, name: 'Lifestyle bare land'},
+                                   {id: 4, name: 'Lifestyle dwelling'},
+                                   {id: 5, name: 'Section'},
+                                   {id: 6, name: 'Townhouse'},
+                                   {id: 7, name: 'Unit'}]
+    }
+
+    
+    
+    
     }

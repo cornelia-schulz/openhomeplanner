@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
     <img class="banner" src="/images/howick.jpg" alt="howick">
     <region-search-box></region-search-box>
     <rooms-price-search-box></rooms-price-search-box>
+    <property-type-search-box></property-type-search-box>
   `
   
 })
