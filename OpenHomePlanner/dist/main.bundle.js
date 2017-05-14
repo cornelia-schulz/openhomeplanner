@@ -57,25 +57,32 @@ module.exports = module.exports.toString();
 /***/ 163:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"property-type-search\">\r\n    <fieldset class=\"selector\">\r\n        <label>Property Type:</label><br />\r\n        <ss-multiselect-dropdown class=\"search-selector\" [options]=\"propertyTypeOptions\" [texts]=\"propertyTypeTexts\" [settings]=\"propertyTypeListSettings\" [(ngModel)]=\"selectedPropertyTypes\">\r\n        </ss-multiselect-dropdown>\r\n    </fieldset>\r\n    <fieldset class=\"selector\">\r\n        <label>Open Home Date:</label>\r\n        <my-date-picker name=\"mydate\" [options]=\"myDatePickerOptions\"\r\n                (dateChanged)=\"onDateChanged($event)\"\r\n                [(ngModel)]=\"model\"\r\n                [selDate]=\"selectedDate\" required></my-date-picker>\r\n    </fieldset>\r\n</div>"
+module.exports = "\r\n<h1>{{title}}</h1>\r\n    <img class=\"banner\" src=\"/images/howick.jpg\" alt=\"howick\">\r\n    <div class=\"search\">\r\n    <region-search-box></region-search-box>\r\n    <rooms-price-search-box></rooms-price-search-box>\r\n    <property-type-search-box></property-type-search-box>\r\n    </div>\r\n    <div class=\"results\"></div>"
 
 /***/ }),
 
 /***/ 164:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"region-search\">\r\n<fieldset class=\"selector\">\r\n  <label>Region:</label>\r\n  <select class=\"search-selector\" [(ngModel)]=\"selectedRegion\"(change)=\"getDistricts($event)\" >\r\n    <option *ngFor=\"let region of regions\" [ngValue]=\"region\">{{region.name}}</option>\r\n  </select>\r\n</fieldset>\r\n<fieldset class=\"selector\">\r\n  <label>District:</label>\r\n  <select [disabled]=\"districtsDisabled\" class=\"search-selector\" [(ngModel)]=\"selectedDistrict\" (change)=\"getSuburbs($event)\">\r\n    <option *ngFor=\"let district of districts\" [ngValue]=\"district\">{{district.name}}</option>\r\n  </select>\r\n</fieldset>\r\n<fieldset class=\"selector\">\r\n  <label>Suburb:</label><br />\r\n  <ss-multiselect-dropdown [disabled]=\"suburbsDisabled\" class=\"search-selector\" [options]=\"suburbOptions\" [texts]=\"suburbTexts\" [settings]=\"suburbListSettings\" [(ngModel)]=\"selectedSuburbs\"(ngModelChange)=\"getSelectedSuburbs($event)\">\r\n  </ss-multiselect-dropdown>\r\n</fieldset>\r\n</div>"
+module.exports = "<div class=\"property-type-search\">\r\n    <fieldset class=\"selector\">\r\n        <label>Property Type:</label><br />\r\n        <ss-multiselect-dropdown class=\"search-selector\" [options]=\"propertyTypeOptions\" [texts]=\"propertyTypeTexts\" [settings]=\"propertyTypeListSettings\" [(ngModel)]=\"selectedPropertyTypes\">\r\n        </ss-multiselect-dropdown>\r\n    </fieldset>\r\n    <fieldset class=\"selector\">\r\n        <label>Open Home Date:</label>\r\n        <my-date-picker name=\"mydate\" [options]=\"myDatePickerOptions\"\r\n                (dateChanged)=\"onDateChanged($event)\"\r\n                [(ngModel)]=\"model\"\r\n                [selDate]=\"selectedDate\" required></my-date-picker>\r\n    </fieldset>\r\n</div>"
 
 /***/ }),
 
 /***/ 165:
 /***/ (function(module, exports) {
 
+module.exports = "<div class=\"region-search\">\r\n<fieldset class=\"selector\">\r\n  <label>Region:</label>\r\n  <select class=\"search-selector\" [(ngModel)]=\"selectedRegion\"(change)=\"getDistricts($event)\" >\r\n    <option *ngFor=\"let region of regions\" [ngValue]=\"region\">{{region.name}}</option>\r\n  </select>\r\n</fieldset>\r\n<fieldset class=\"selector\">\r\n  <label>District:</label>\r\n  <select [disabled]=\"districtsDisabled\" class=\"search-selector\" [(ngModel)]=\"selectedDistrict\" (change)=\"getSuburbs($event)\">\r\n    <option *ngFor=\"let district of districts\" [ngValue]=\"district\">{{district.name}}</option>\r\n  </select>\r\n</fieldset>\r\n<fieldset class=\"selector\">\r\n  <label>Suburb:</label><br />\r\n  <ss-multiselect-dropdown [disabled]=\"suburbsDisabled\" class=\"search-selector\" [options]=\"suburbOptions\" [texts]=\"suburbTexts\" [settings]=\"suburbListSettings\" [(ngModel)]=\"selectedSuburbs\"(ngModelChange)=\"getSelectedSuburbs($event)\">\r\n  </ss-multiselect-dropdown>\r\n</fieldset>\r\n</div>"
+
+/***/ }),
+
+/***/ 166:
+/***/ (function(module, exports) {
+
 module.exports = "<div class=\"room-price-search\">\r\n<fieldset class=\"selector\">\r\n  <label>Bedrooms:</label><br/>\r\n  <select class=\"search-selector\" [(ngModel)]=\"minBedrooms\" (change)=\"getMinBedrooms($event)\" >\r\n    <option value=\"\" disabled hidden [value]=\"any\">Any</option>\r\n    <option *ngFor=\"let bedroom of bedroomOptions\" [ngValue]=\"bedroom\" [selected]=\"bedroom == 'Any'\">{{bedroom}}</option>\r\n  </select>\r\n  to\r\n  <select class=\"search-selector\" [(ngModel)]=\"maxBedrooms\" (change)=\"getMaxBedrooms($event)\" >\r\n      <option value=\"\" disabled hidden [value]=\"any\">Any</option>\r\n    <option *ngFor=\"let bedroom of bedroomOptions\" [ngValue]=\"bedroom\">{{bedroom}}</option>\r\n  </select>\r\n</fieldset>\r\n<fieldset class=\"selector\">\r\n  <label>Bathrooms:</label><br/>\r\n  <select class=\"search-selector\" [(ngModel)]=\"minBathrooms\" (change)=\"getMinBathrooms($event)\">\r\n      <option value=\"\" disabled hidden [value]=\"any\">Any</option>\r\n    <option *ngFor=\"let bathroom of bathroomOptions\" [ngValue]=\"bathroom\">{{bathroom}}</option>\r\n  </select>\r\n  to\r\n  <select class=\"search-selector\" [(ngModel)]=\"maxBathrooms\"  (change)=\"getMaxBathrooms($event)\">\r\n      <option value=\"\" disabled hidden [value]=\"any\">Any</option>\r\n    <option *ngFor=\"let bathroom of bathroomOptions\" [ngValue]=\"bathroom\">{{bathroom}}</option>\r\n  </select>\r\n</fieldset>\r\n<fieldset class=\"selector\">\r\n  <label>Price:</label><br />\r\n  <select class=\"search-selector\" [(ngModel)]=\"minPrice\" (change)=\"getMinPrice($event)\">\r\n      <option value=\"\" disabled hidden [value]=\"any\">Any</option>\r\n    <option *ngFor=\"let price of priceOptions\" [ngValue]=\"price\">{{price | currency:'NZD':true:'1.2-2'}}</option>\r\n  </select>\r\n  to\r\n  <select class=\"search-selector\" [(ngModel)]=\"maxPrice\" (change)=\"getMaxPrice($event)\">\r\n      <option value=\"\" disabled hidden [value]=\"any\">Any</option>\r\n    <option *ngFor=\"let price of priceOptions\" [ngValue]=\"price\">{{price | currency:'NZD':true:'1.2-2'}}</option>\r\n  </select>\r\n</fieldset>\r\n</div>"
 
 /***/ }),
 
-/***/ 207:
+/***/ 208:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(83);
@@ -93,15 +100,15 @@ module.exports = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_delay__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_delay___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_delay__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__ = __webpack_require__(173);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise__ = __webpack_require__(175);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__(174);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_catch__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_catch__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_throw__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_throw__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_throw__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -203,7 +210,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Component */])({
         selector: 'app-root',
-        template: "\n    <h1>{{title}}</h1>\n    <img class=\"banner\" src=\"/images/howick.jpg\" alt=\"howick\">\n    <region-search-box></region-search-box>\n    <rooms-price-search-box></rooms-price-search-box>\n    <property-type-search-box></property-type-search-box>\n  "
+        template: __webpack_require__(163)
     })
 ], AppComponent);
 
@@ -349,7 +356,7 @@ var PropertyTypeSearchBoxComponent = (function () {
 PropertyTypeSearchBoxComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Component */])({
         selector: 'property-type-search-box',
-        template: __webpack_require__(163),
+        template: __webpack_require__(164),
         styles: [__webpack_require__(153)]
     })
 ], PropertyTypeSearchBoxComponent);
@@ -437,7 +444,7 @@ var RegionSearchBoxComponent = (function () {
 RegionSearchBoxComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Component */])({
         selector: 'region-search-box',
-        template: __webpack_require__(164),
+        template: __webpack_require__(165),
         styles: [__webpack_require__(154)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */]) === "function" && _a || Object])
@@ -505,7 +512,7 @@ var RoomsPriceSearchBoxComponent = (function () {
 RoomsPriceSearchBoxComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Component */])({
         selector: 'rooms-price-search-box',
-        template: __webpack_require__(165),
+        template: __webpack_require__(166),
         styles: [__webpack_require__(155)]
     })
 ], RoomsPriceSearchBoxComponent);
@@ -609,5 +616,5 @@ var environment = {
 
 /***/ })
 
-},[207]);
+},[208]);
 //# sourceMappingURL=main.bundle.js.map
