@@ -1,8 +1,14 @@
-<div>
+<div class="property-type-search">
     <fieldset class="selector">
         <label>Property Type:</label><br />
         <ss-multiselect-dropdown class="search-selector" [options]="propertyTypeOptions" [texts]="propertyTypeTexts" [settings]="propertyTypeListSettings" [(ngModel)]="selectedPropertyTypes">
         </ss-multiselect-dropdown>
     </fieldset>
-
+    <fieldset class="selector">
+        <label>Open Home Date:</label>
+        <my-date-picker name="mydate" [options]="myDatePickerOptions"
+                (dateChanged)="onDateChanged($event)"
+                [(ngModel)]="model"
+                [selDate]="selectedDate" required></my-date-picker>
+    </fieldset>
 </div>

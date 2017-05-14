@@ -3,6 +3,8 @@ import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
 import { IMultiSelectTexts }  from 'angular-2-dropdown-multiselect';
 import { IMultiSelectSettings } from 'angular-2-dropdown-multiselect';
 import { DataService } from './data.service';
+import { IMyOptions } from 'mydatepicker';
+
 
 @Component({
   moduleId: module.id,
@@ -30,6 +32,12 @@ export class PropertyTypeSearchBoxComponent implements OnInit{
         dynamicTitleMaxItems: 3,
         displayAllSelectedText: true
     }
+
+    private myDatePickerOptions: IMyOptions = {
+      dateFormat: 'dd/mm/yyyy'
+    }
+
+    private model: Object = { date: {year: 2017, month: 5, day: 14}};
 
     ngOnInit(){
       this.propertyTypeOptions = [{ id: 1, name: 'Apartment'},
