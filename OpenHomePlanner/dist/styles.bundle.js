@@ -36,7 +36,7 @@ exports = module.exports = __webpack_require__(22)(false);
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\nbody {\r\n    font-family: 'Open Sans', sans-serif;\r\n    background-color: #369;\r\n    padding-top: 0; \r\n}\r\n\r\n.container {\r\n    width: 800px;\r\n    margin: 0 auto;\r\n    background-color: #fff;\r\n    padding: 20px;\r\n}\r\n\r\nh1 {\r\n    color: #369;\r\n    font-size: 250%;\r\n}\r\n\r\n.banner {\r\n    width: 100%;\r\n}\r\n\r\n.selector {\r\n    margin: 0;\r\n    width: 239.462px;\r\n    border: none;\r\n}\r\n\r\n.dropdown-menu {\r\n    list-style-type: none;\r\n}\r\n\r\n.dropdown-item a {\r\n    text-decoration: none;\r\n    color: #369;\r\n}\r\n\r\n.dropdown-toggle {\r\n    background-color: #369;\r\n    color: #fff;\r\n    width: 235px;\r\n}", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\nbody {\r\n    font-family: 'Open Sans', sans-serif;\r\n    background-color: #369;\r\n    padding-top: 0; \r\n}\r\n\r\n.container {\r\n    width: 800px;\r\n    margin: 0 auto;\r\n    background-color: #fff;\r\n    padding: 20px;\r\n}\r\n\r\nh1 {\r\n    color: #369;\r\n    font-size: 250%;\r\n}\r\n\r\n.banner {\r\n    width: 100%;\r\n}\r\n\r\n.selector {\r\n    width: 239.462px;\r\n    border: none;\r\n}\r\n\r\n.dropdown-menu {\r\n    list-style-type: none;\r\n}\r\n\r\n.dropdown-item a {\r\n    text-decoration: none;\r\n    color: #369;\r\n}\r\n\r\n.dropdown-toggle {\r\n    background-color: #369;\r\n    color: #fff;\r\n    width: 235px;\r\n}", ""]);
 
 // exports
 

@@ -8,7 +8,7 @@ exports = module.exports = __webpack_require__(22)(false);
 
 
 // module
-exports.push([module.i, ".property-type-search {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n}", ""]);
+exports.push([module.i, ".property-type-search {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n}\r\n\r\n.white {\r\n    color: #fff;\r\n}\r\n\r\n.search-button {\r\n    background-color: #369;\r\n    width: 100%;\r\n    color: #fff;\r\n    line-height: 200%;\r\n}", ""]);
 
 // exports
 
@@ -64,7 +64,7 @@ module.exports = "\r\n<h1>{{title}}</h1>\r\n    <img class=\"banner\" src=\"/ima
 /***/ 164:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"property-type-search\">\r\n    <fieldset class=\"selector\">\r\n        <label>Property Type:</label><br />\r\n        <ss-multiselect-dropdown class=\"search-selector\" [options]=\"propertyTypeOptions\" [texts]=\"propertyTypeTexts\" [settings]=\"propertyTypeListSettings\" [(ngModel)]=\"selectedPropertyTypes\">\r\n        </ss-multiselect-dropdown>\r\n    </fieldset>\r\n    <fieldset class=\"selector\">\r\n        <label>Open Home Date:</label>\r\n        <my-date-picker name=\"mydate\" [options]=\"myDatePickerOptions\"\r\n                (dateChanged)=\"onDateChanged($event)\"\r\n                [(ngModel)]=\"model\"\r\n                [selDate]=\"selectedDate\" required></my-date-picker>\r\n    </fieldset>\r\n</div>"
+module.exports = "<div class=\"property-type-search\">\r\n    <fieldset class=\"selector\">\r\n        <label>Property Type:</label><br />\r\n        <ss-multiselect-dropdown class=\"search-selector\" [options]=\"propertyTypeOptions\" [texts]=\"propertyTypeTexts\" [settings]=\"propertyTypeListSettings\" [(ngModel)]=\"selectedPropertyTypes\">\r\n        </ss-multiselect-dropdown>\r\n    </fieldset>\r\n    <fieldset class=\"selector\">\r\n        <label>Open Home Date:</label>\r\n        <my-date-picker name=\"mydate\" [options]=\"myDatePickerOptions\"\r\n                (dateChanged)=\"onDateChanged($event)\"\r\n                [(ngModel)]=\"model\"\r\n                [selDate]=\"selectedDate\" required></my-date-picker>\r\n    </fieldset>\r\n    <fieldset class=\"selector\">\r\n        <label class=\"white\">Search</label><br/>\r\n        <button class=\"search-button\">Search</button>\r\n    </fieldset>\r\n\r\n</div>"
 
 /***/ }),
 
