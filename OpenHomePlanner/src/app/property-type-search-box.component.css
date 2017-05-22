@@ -1,0 +1,14 @@
+.property-type-search {
+    display: flex;
+}
+
+.white {
+    color: #fff;
+}
+
+.search-button {
+    background-color: #369;
+    width: 100%;
+    color: #fff;
+    line-height: 200%;
+}
