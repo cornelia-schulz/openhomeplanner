@@ -1,0 +1,17 @@
+h3 {
+    display: inline;
+}
+
+.result-list-entry {
+    border: 1px solid #369;
+    padding: 5px;
+}
+
+.glyphicon-chevron-down {
+  text-align: right;
+}
+
+.property-img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}

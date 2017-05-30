@@ -1,14 +1,13 @@
 
 .region-search {
-    display: flex;
+    margin-top: 20px;
 }
 
-.selector { 
-    width: 33%;
-}
 
 .search-selector {
     width: 100%;
+    height: 33px;
+    border-radius: 4px;
 }
 
 .btn {

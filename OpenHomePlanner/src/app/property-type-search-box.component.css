@@ -1,5 +1,5 @@
 .property-type-search {
-    display: flex;
+    margin-top: 10px;
 }
 
 .white {
@@ -10,5 +10,4 @@
     background-color: #369;
     width: 100%;
     color: #fff;
-    line-height: 200%;
 }

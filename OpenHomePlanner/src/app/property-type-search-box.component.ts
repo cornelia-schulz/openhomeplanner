@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
 import { IMultiSelectTexts }  from 'angular-2-dropdown-multiselect';
 import { IMultiSelectSettings } from 'angular-2-dropdown-multiselect';
 import { DataService } from './data.service';
 import { IMyOptions } from 'mydatepicker';
+import { IMyDateModel } from 'mydatepicker';
 
 
 @Component({
@@ -16,8 +17,12 @@ import { IMyOptions } from 'mydatepicker';
 export class PropertyTypeSearchBoxComponent implements OnInit{
     propertyTypeOptions: IMultiSelectOption[];
     selectedPropertyTypes: number[];
+    today = new Date();
+    currentYear = this.today.getFullYear();
+    currentMonth = this.today.getMonth() + 1;
+    currentDay = this.today.getDate();
+    @Input() selectedDate : any;
 
-    //constructor(private dataService: DataService) {}
     propertyTypeTexts: IMultiSelectTexts = {
         checkAll: 'Select all',
         uncheckAll: 'Deselect all',
@@ -37,7 +42,7 @@ export class PropertyTypeSearchBoxComponent implements OnInit{
       dateFormat: 'dd/mm/yyyy'
     }
 
-    private model: Object = { date: {year: 2017, month: 5, day: 14}};
+    private model: Object = { date: {year: this.currentYear, month: this.currentMonth, day: this.currentDay}};
 
     ngOnInit(){
       this.propertyTypeOptions = [{ id: 1, name: 'Apartment'},
@@ -46,10 +51,15 @@ export class PropertyTypeSearchBoxComponent implements OnInit{
                                    {id: 4, name: 'Lifestyle dwelling'},
                                    {id: 5, name: 'Section'},
                                    {id: 6, name: 'Townhouse'},
-                                   {id: 7, name: 'Unit'}]
+                                   {id: 7, name: 'Unit'}];
     }
 
-    
+    onDateChanged(event: IMyDateModel){
+        console.log(event.date);
+        this.selectedDate = event.date;
+        return this.selectedDate;
+    }
+
     
     
     }

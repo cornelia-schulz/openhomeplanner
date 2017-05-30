@@ -28,8 +28,6 @@ export class RegionSearchBoxComponent implements OnInit {
     districtsDisabled: boolean;
     suburbsDisabled: boolean;
 
-
-
     constructor(private dataService: DataService) { }
 
     // style suburb list
@@ -47,8 +45,6 @@ export class RegionSearchBoxComponent implements OnInit {
         dynamicTitleMaxItems: 3,
         displayAllSelectedText: false
     }
-
-
 
     ngOnInit() {
         this.getRegions();
@@ -74,17 +70,14 @@ export class RegionSearchBoxComponent implements OnInit {
     getSuburbs(event: Event): void {
         this.district = this.selectedDistrict;
         this.suburbs = this.district.suburb;
-        console.log(this.suburbs[0].name);
 
         for (var i = 0; i < this.suburbs.length; i++) {
             this.suburbOptions.push({ id: i, name: this.suburbs[i].name })
         }
-        console.log(this.suburbOptions[0])
         this.suburbsDisabled = false;
     }
 
     getSelectedSuburbs() {
-        console.log("selected suburbs: " + this.selectedSuburbs);
         for (var i = 0; i < this.selectedSuburbs.length; i++) {
             //
         }

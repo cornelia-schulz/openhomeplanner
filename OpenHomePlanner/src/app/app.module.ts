@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { RegionSearchBoxComponent } from './region-search-box-component';
 import { RoomsPriceSearchBoxComponent } from './rooms-price-search-box.component';
 import { PropertyTypeSearchBoxComponent } from './property-type-search-box.component';
+import { DisplayResultBoxComponent } from './display-result-box.component';
 import { DataService } from './data.service';
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -19,7 +20,8 @@ import { InMemoryDataService } from './in-memory-data.service';
     AppComponent,
     RegionSearchBoxComponent,
     RoomsPriceSearchBoxComponent,
-    PropertyTypeSearchBoxComponent
+    PropertyTypeSearchBoxComponent,
+    DisplayResultBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,9 @@ import { InMemoryDataService } from './in-memory-data.service';
     MyDatePickerModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
-  providers: [DataService],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,6 +4,9 @@
     <div class="search">
     <region-search-box></region-search-box>
     <rooms-price-search-box></rooms-price-search-box>
-    <property-type-search-box></property-type-search-box>
+    <property-type-search-box [selectedDate]="selectedDate"></property-type-search-box>
     </div>
-    <div class="results"></div>
+    <hr />
+    <div class="results">
+        <display-result-box></display-result-box>
+    </div>

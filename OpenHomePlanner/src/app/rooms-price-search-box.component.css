@@ -1,12 +1,11 @@
 
 .room-price-search {
-    display: flex;
+    margin-top: 10px;
 }
 
-.selector { 
-    width: 33%;
-}
+
 
 .search-selector {
     width: 44%;
+    border-radius: 4px;
 }

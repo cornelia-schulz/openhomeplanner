@@ -10,21 +10,35 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 
 import { createTestRegions } from './test-data';
+import { createTestProperties } from './test-data';
 import { Region } from './model';
+import { Property } from './model';
 
 @Injectable()
 export class DataService {
     private regionUrl = 'api/regions';
+    private propertyUrl = 'api/properties';
 
     constructor(
         private http: Http,
     ){}
 
     getRegions(): Observable<Region[]>{
+        console.log('getregions')
         return this.http.get(this.regionUrl)
             .map(response => response.json().data as Region[])
             .catch((error: any) => {
                 return Observable.throw('Something happened getting regions, please check the console.')
             });
     }
+
+    getProperties(): Observable<Property[]>{
+        return this.http.get(this.propertyUrl)
+            .map(response => response.json().data as Property[])
+            .catch((error: any) => {
+                return Observable.throw('Something went wrong while getting properties')
+            });
+    }
+
+
 }

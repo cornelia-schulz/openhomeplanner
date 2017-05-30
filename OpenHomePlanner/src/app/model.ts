@@ -14,11 +14,10 @@ export class Suburb {
 }
 
 export class Address {
-  id: number;
   street: string;
   city: string;
   postcode: number;
-  suburb: string;
+  suburb: Suburb;
 }
 
 export class Property {
@@ -27,4 +26,14 @@ export class Property {
   bathrooms: number;
   price: number;
   address: Address;
+  openHomeFromTime: Date;
+  openHomeToTime: Date;
+  openHomeDate: Date;
+  image: string;
+  title: string;
+  description: string;
 }
+
+/*
+export class
+ */
