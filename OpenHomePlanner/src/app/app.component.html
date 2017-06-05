@@ -2,11 +2,9 @@
 <h1>{{title}}</h1>
     <img class="banner" src="/images/howick.jpg" alt="howick">
     <div class="search">
-    <region-search-box></region-search-box>
-    <rooms-price-search-box></rooms-price-search-box>
-    <property-type-search-box (setDate)="onSearch($event)"></property-type-search-box>
+    <search-box (setDate)="onSearch($event)"></search-box>
     </div>
     <hr />
     <div class="results">
-        <display-result-box [selectedDate2]="selectedDate"></display-result-box>
+        <display-result-box [selectedDate]="selectedDate"></display-result-box>
     </div>

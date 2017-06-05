@@ -272,12 +272,6 @@
     <Content Include="src\app\app.component.html" />
     <Content Include="src\app\search\display-result-box.component.css" />
     <Content Include="src\app\search\display-result-box.component.html" />
-    <Content Include="src\app\search\property-type-search-box.component.css" />
-    <Content Include="src\app\search\property-type-search-box.component.html" />
-    <Content Include="src\app\search\region-search-box.component.css" />
-    <Content Include="src\app\search\region-search-box.component.html" />
-    <Content Include="src\app\search\rooms-price-search-box.component.css" />
-    <Content Include="src\app\search\rooms-price-search-box.component.html" />
     <Content Include="src\app\search\search-box.component.css" />
     <Content Include="src\app\search\search-box.component.html" />
     <Content Include="src\favicon.ico" />
@@ -338,9 +332,6 @@
     <TypeScriptCompile Include="src\app\search\display-result-box.component.ts" />
     <TypeScriptCompile Include="src\app\search\in-memory-data.service.ts" />
     <TypeScriptCompile Include="src\app\search\model.ts" />
-    <TypeScriptCompile Include="src\app\search\property-type-search-box.component.ts" />
-    <TypeScriptCompile Include="src\app\search\region-search-box-component.ts" />
-    <TypeScriptCompile Include="src\app\search\rooms-price-search-box.component.ts" />
     <TypeScriptCompile Include="src\app\search\search-box.component.ts" />
     <TypeScriptCompile Include="src\app\search\test-data.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />

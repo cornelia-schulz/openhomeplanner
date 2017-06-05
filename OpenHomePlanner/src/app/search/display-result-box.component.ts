@@ -6,7 +6,7 @@ import { Property } from './model';
 @Component({
     moduleId: module.id,
     selector: 'display-result-box',
-    inputs: ['selectedDate2'],
+    inputs: ['selectedDate'],
     templateUrl: './display-result-box.component.html',
     styleUrls: ['display-result-box.component.css']
 })
@@ -14,12 +14,12 @@ import { Property } from './model';
 export class DisplayResultBoxComponent implements OnInit {
     properties: Property[];
     sortedProperties: Property[];
-    title = "Open Homes scheduled for your chosen date";
-    public selectedDate2: any;
+    title = "Open Homes scheduled for ";
+    public selectedDate: any;
 
     get dateText(): string {
-        if (this.selectedDate2) {
-            return this.selectedDate2.day + '/' + this.selectedDate2.month + '/' + this.selectedDate2.year;
+        if (this.selectedDate) {
+            return this.selectedDate.day + '/' + this.selectedDate.month + '/' + this.selectedDate.year;
         }
         return "";
     }

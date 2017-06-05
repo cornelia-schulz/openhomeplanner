@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PropertyTypeSearchBoxComponent } from './search/property-type-search-box.component'
+import { SearchBoxComponent } from './search/search-box.component'
 import { IMyDateModel } from "mydatepicker";
 
 @Component({
