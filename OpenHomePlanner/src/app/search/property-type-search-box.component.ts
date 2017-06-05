@@ -64,7 +64,4 @@ export class PropertyTypeSearchBoxComponent implements OnInit {
         this.setDate.emit(this.selectedDate);
         return this.selectedDate;
     }
-
-
-
 }
