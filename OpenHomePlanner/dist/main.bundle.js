@@ -303,7 +303,6 @@ function createTestProperties() {
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-// The file contents for the current environment will overwrite these during build.
 var environment = {
     production: false
 };
@@ -386,14 +385,14 @@ module.exports = module.exports.toString();
 /***/ 180:
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<h1>{{title}}</h1>\r\n    <img class=\"banner\" src=\"/images/howick.jpg\" alt=\"howick\">\r\n    <div class=\"search\">\r\n    <region-search-box></region-search-box>\r\n    <rooms-price-search-box></rooms-price-search-box>\r\n    <property-type-search-box [selectedDate]=\"selectedDate\"></property-type-search-box>\r\n    </div>\r\n    <hr />\r\n    <div class=\"results\">\r\n        <display-result-box></display-result-box>\r\n    </div>"
+module.exports = "\r\n<h1>{{title}}</h1>\r\n    <img class=\"banner\" src=\"/images/howick.jpg\" alt=\"howick\">\r\n    <div class=\"search\">\r\n    <region-search-box></region-search-box>\r\n    <rooms-price-search-box></rooms-price-search-box>\r\n    <property-type-search-box (setDate)=\"onSearch($event)\"></property-type-search-box>\r\n    </div>\r\n    <hr />\r\n    <div class=\"results\">\r\n        <display-result-box [selectedDate2]=\"selectedDate\"></display-result-box>\r\n    </div>"
 
 /***/ }),
 
 /***/ 181:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"result-list\">\r\n  <h2>{{title}}</h2>\r\n    <div id=\"results\" class=\"panel-group\">\r\n        <div class=\"panel panel-default\" *ngFor=\"let property of properties\">\r\n            <div  class=\" panel-heading result-list-entry\" >\r\n                <div class=\"row\">\r\n                    <div class=\"col-md-2\">{{property.openHomeFromTime | date:'H:mm'}} - {{property.openHomeToTime | date:'H:mm'}}</div>\r\n                    <div class=\"col-md-9\"><h3>{{property.title}}</h3>, <i class=\"fa fa-bed\" aria-hidden=\"true\"></i> {{ property.bedrooms }}, <i class=\"fa fa-bath\" aria-hidden=\"true\"></i> {{ property.bathrooms }}</div>\r\n                    <div  class=\"col-md-1\">\r\n                        <a data-toggle=\"collapse\" data-parent=\"#results\"  href=\"#{{property.id}}\">\r\n                            <span class=\"glyphicon glyphicon-collapse-down\"></span>\r\n                        </a>\r\n                    </div>\r\n                </div>\r\n                <div class=\"row\">\r\n                    <div  class=\"col-md-8 col-md-offset-2\">{{property.address.street}}, {{property.address.suburb.name}}, {{property.address.city}}</div>\r\n                </div>\r\n            </div>\r\n            <div  [attr.id]=\"property.id\"  class=\"panel-collapse collapse\">\r\n                <div class=\"panel-body\">\r\n                    <div class=\"row\">\r\n                        <div class=\"col-md-2\">\r\n                            <img class=\"property-img\" [src]=\"property.image\" alt=\"images of the property\">\r\n                        </div>\r\n                        <div class=\"col-md-10\">\r\n                            <p>Some info about this property. Some info about this property. Some info about this property. Some info about this property. \r\n                                Some info about this property. Some info about this property. Some info about this property. Some info about this property. \r\n                                Some info about this property. Some info about this property. Some info about this property. Some info about this property. \r\n                            </p>\r\n                            <p>{{property.price | currency:'NZD'}}</p>\r\n                        </div>\r\n                    </div>\r\n                        \r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n"
+module.exports = "<div class=\"result-list\">\r\n    <h2>{{title}} {{ dateText }}</h2>\r\n    <div>\r\n        <div id=\"results\" class=\"panel-group\">\r\n            <div class=\"panel panel-default\" *ngFor=\"let property of properties\">\r\n                <div class=\" panel-heading result-list-entry\">\r\n                    <div class=\"row\">\r\n                        <div class=\"col-md-2\">{{property.openHomeFromTime | date:'H:mm'}} - {{property.openHomeToTime | date:'H:mm'}}</div>\r\n                        <div class=\"col-md-9\">\r\n                            <h3>{{property.title}}</h3>, <i class=\"fa fa-bed\" aria-hidden=\"true\"></i> {{ property.bedrooms }},\r\n                            <i class=\"fa fa-bath\" aria-hidden=\"true\"></i> {{ property.bathrooms }}</div>\r\n                        <div class=\"col-md-1\">\r\n                            <a data-toggle=\"collapse\" data-parent=\"#results\" href=\"#{{property.id}}\">\r\n                            <span class=\"glyphicon glyphicon-collapse-down\"></span>\r\n                        </a>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"row\">\r\n                        <div class=\"col-md-8 col-md-offset-2\">{{property.address.street}}, {{property.address.suburb.name}}, {{property.address.city}}</div>\r\n                    </div>\r\n                </div>\r\n                <div [attr.id]=\"property.id\" class=\"panel-collapse collapse\">\r\n                    <div class=\"panel-body\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-md-2\">\r\n                                <img class=\"property-img\" [src]=\"property.image\" alt=\"images of the property\">\r\n                            </div>\r\n                            <div class=\"col-md-10\">\r\n                                <p>Some info about this property. Some info about this property. Some info about this property.\r\n                                    Some info about this property. Some info about this property. Some info about this property.\r\n                                    Some info about this property. Some info about this property. Some info about this property.\r\n                                    Some info about this property. Some info about this property. Some info about this property.\r\n                                </p>\r\n                                <p>{{property.price | currency:'NZD'}}</p>\r\n                            </div>\r\n                        </div>\r\n\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>"
 
 /***/ }),
 
@@ -550,6 +549,9 @@ var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Open Home Planner';
     }
+    AppComponent.prototype.onSearch = function (event) {
+        this.selectedDate = event;
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
@@ -574,13 +576,13 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_2_dropdown_multiselect__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_mydatepicker__ = __webpack_require__(176);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__region_search_box_component__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__rooms_price_search_box_component__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__property_type_search_box_component__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__display_result_box_component__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__data_service__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__search_region_search_box_component__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__search_rooms_price_search_box_component__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__search_property_type_search_box_component__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__search_display_result_box_component__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__search_data_service__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_angular_in_memory_web_api__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__in_memory_data_service__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__search_in_memory_data_service__ = __webpack_require__(98);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -611,10 +613,10 @@ AppModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__region_search_box_component__["a" /* RegionSearchBoxComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__rooms_price_search_box_component__["a" /* RoomsPriceSearchBoxComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__property_type_search_box_component__["a" /* PropertyTypeSearchBoxComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__display_result_box_component__["a" /* DisplayResultBoxComponent */]
+            __WEBPACK_IMPORTED_MODULE_7__search_region_search_box_component__["a" /* RegionSearchBoxComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__search_rooms_price_search_box_component__["a" /* RoomsPriceSearchBoxComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__search_property_type_search_box_component__["a" /* PropertyTypeSearchBoxComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__search_display_result_box_component__["a" /* DisplayResultBoxComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -622,10 +624,10 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_4_angular_2_dropdown_multiselect__["a" /* MultiselectDropdownModule */],
             __WEBPACK_IMPORTED_MODULE_5_mydatepicker__["a" /* MyDatePickerModule */],
-            __WEBPACK_IMPORTED_MODULE_12_angular_in_memory_web_api__["a" /* InMemoryWebApiModule */].forRoot(__WEBPACK_IMPORTED_MODULE_13__in_memory_data_service__["a" /* InMemoryDataService */])
+            __WEBPACK_IMPORTED_MODULE_12_angular_in_memory_web_api__["a" /* InMemoryWebApiModule */].forRoot(__WEBPACK_IMPORTED_MODULE_13__search_in_memory_data_service__["a" /* InMemoryDataService */])
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_11__data_service__["a" /* DataService */]
+            __WEBPACK_IMPORTED_MODULE_11__search_data_service__["a" /* DataService */]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
     })
@@ -658,6 +660,16 @@ var DisplayResultBoxComponent = (function () {
         this.dataService = dataService;
         this.title = "Open Homes scheduled for your chosen date";
     }
+    Object.defineProperty(DisplayResultBoxComponent.prototype, "dateText", {
+        get: function () {
+            if (this.selectedDate2) {
+                return this.selectedDate2.day + '/' + this.selectedDate2.month + '/' + this.selectedDate2.year;
+            }
+            return "";
+        },
+        enumerable: true,
+        configurable: true
+    });
     DisplayResultBoxComponent.prototype.ngOnInit = function () {
         this.getProperties();
     };
@@ -679,8 +691,6 @@ var DisplayResultBoxComponent = (function () {
             alert(errorMsg);
         });
     };
-    DisplayResultBoxComponent.prototype.getSelectedDate = function () {
-    };
     DisplayResultBoxComponent.prototype.removePropertyfromList = function () {
     };
     return DisplayResultBoxComponent;
@@ -688,6 +698,7 @@ var DisplayResultBoxComponent = (function () {
 DisplayResultBoxComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Component */])({
         selector: 'display-result-box',
+        inputs: ['selectedDate2'],
         template: __webpack_require__(181),
         styles: [__webpack_require__(163)]
     }),
@@ -734,9 +745,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 var PropertyTypeSearchBoxComponent = (function () {
     function PropertyTypeSearchBoxComponent() {
@@ -744,6 +752,7 @@ var PropertyTypeSearchBoxComponent = (function () {
         this.currentYear = this.today.getFullYear();
         this.currentMonth = this.today.getMonth() + 1;
         this.currentDay = this.today.getDate();
+        this.setDate = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* EventEmitter */]();
         this.propertyTypeTexts = {
             checkAll: 'Select all',
             uncheckAll: 'Deselect all',
@@ -775,17 +784,15 @@ var PropertyTypeSearchBoxComponent = (function () {
     PropertyTypeSearchBoxComponent.prototype.onDateChanged = function (event) {
         console.log(event.date);
         this.selectedDate = event.date;
+        this.setDate.emit(this.selectedDate);
         return this.selectedDate;
     };
     return PropertyTypeSearchBoxComponent;
 }());
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* Input */])(),
-    __metadata("design:type", Object)
-], PropertyTypeSearchBoxComponent.prototype, "selectedDate", void 0);
 PropertyTypeSearchBoxComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Component */])({
         selector: 'property-type-search-box',
+        outputs: ['setDate'],
         template: __webpack_require__(182),
         styles: [__webpack_require__(164)]
     })

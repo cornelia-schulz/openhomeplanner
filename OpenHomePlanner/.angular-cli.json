@@ -25,7 +25,7 @@
 		"styles.css"
       ],
       "scripts": [
-		"../node_modules/webpack-dev-server/client/web_modules/jquery/jquery-1.8.1.js",
+		"../Scripts/jquery-1.10.2.min.js",
 		"../Content/bootstrap/js/bootstrap.js"
 	  ],
       "environmentSource": "environments/environment.ts",

@@ -1,27 +1,31 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit, Input } from '@angular/core';
 import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
-import { IMultiSelectTexts }  from 'angular-2-dropdown-multiselect';
+import { IMultiSelectTexts } from 'angular-2-dropdown-multiselect';
 import { IMultiSelectSettings } from 'angular-2-dropdown-multiselect';
 import { DataService } from './data.service';
 import { IMyOptions } from 'mydatepicker';
 import { IMyDateModel } from 'mydatepicker';
+import { DisplayResultBoxComponent } from './display-result-box.component';
 
 
 @Component({
-  moduleId: module.id,
-  selector: 'property-type-search-box',
-  templateUrl: './property-type-search-box.component.html',
-  styleUrls: ['property-type-search-box.component.css']
+    moduleId: module.id,
+    selector: 'property-type-search-box',
+    outputs: ['setDate'],
+    templateUrl: './property-type-search-box.component.html',
+    styleUrls: ['property-type-search-box.component.css']
 })
 
-export class PropertyTypeSearchBoxComponent implements OnInit{
+export class PropertyTypeSearchBoxComponent implements OnInit {
     propertyTypeOptions: IMultiSelectOption[];
     selectedPropertyTypes: number[];
     today = new Date();
     currentYear = this.today.getFullYear();
     currentMonth = this.today.getMonth() + 1;
     currentDay = this.today.getDate();
-    @Input() selectedDate : any;
+    selectedDate: any;
+    public setDate: EventEmitter<any> = new EventEmitter();
+
 
     propertyTypeTexts: IMultiSelectTexts = {
         checkAll: 'Select all',
@@ -39,27 +43,28 @@ export class PropertyTypeSearchBoxComponent implements OnInit{
     }
 
     private myDatePickerOptions: IMyOptions = {
-      dateFormat: 'dd/mm/yyyy'
+        dateFormat: 'dd/mm/yyyy'
     }
 
-    private model: Object = { date: {year: this.currentYear, month: this.currentMonth, day: this.currentDay}};
+    private model: Object = { date: { year: this.currentYear, month: this.currentMonth, day: this.currentDay } };
 
-    ngOnInit(){
-      this.propertyTypeOptions = [{ id: 1, name: 'Apartment'},
-                                  {id: 2, name: 'House'},
-                                   {id: 3, name: 'Lifestyle bare land'},
-                                   {id: 4, name: 'Lifestyle dwelling'},
-                                   {id: 5, name: 'Section'},
-                                   {id: 6, name: 'Townhouse'},
-                                   {id: 7, name: 'Unit'}];
+    ngOnInit() {
+        this.propertyTypeOptions = [{ id: 1, name: 'Apartment' },
+        { id: 2, name: 'House' },
+        { id: 3, name: 'Lifestyle bare land' },
+        { id: 4, name: 'Lifestyle dwelling' },
+        { id: 5, name: 'Section' },
+        { id: 6, name: 'Townhouse' },
+        { id: 7, name: 'Unit' }];
     }
 
-    onDateChanged(event: IMyDateModel){
+    onDateChanged(event: IMyDateModel) {
         console.log(event.date);
         this.selectedDate = event.date;
+        this.setDate.emit(this.selectedDate);
         return this.selectedDate;
     }
 
-    
-    
-    }
+
+
+}

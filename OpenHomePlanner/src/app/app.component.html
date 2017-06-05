@@ -4,9 +4,9 @@
     <div class="search">
     <region-search-box></region-search-box>
     <rooms-price-search-box></rooms-price-search-box>
-    <property-type-search-box [selectedDate]="selectedDate"></property-type-search-box>
+    <property-type-search-box (setDate)="onSearch($event)"></property-type-search-box>
     </div>
     <hr />
     <div class="results">
-        <display-result-box></display-result-box>
+        <display-result-box [selectedDate2]="selectedDate"></display-result-box>
     </div>

@@ -6,14 +6,14 @@ import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
 import { MyDatePickerModule } from 'mydatepicker';
 
 import { AppComponent } from './app.component';
-import { RegionSearchBoxComponent } from './region-search-box-component';
-import { RoomsPriceSearchBoxComponent } from './rooms-price-search-box.component';
-import { PropertyTypeSearchBoxComponent } from './property-type-search-box.component';
-import { DisplayResultBoxComponent } from './display-result-box.component';
-import { DataService } from './data.service';
+import { RegionSearchBoxComponent } from './search/region-search-box-component';
+import { RoomsPriceSearchBoxComponent } from './search/rooms-price-search-box.component';
+import { PropertyTypeSearchBoxComponent } from './search/property-type-search-box.component';
+import { DisplayResultBoxComponent } from './search/display-result-box.component';
+import { DataService } from './search/data.service';
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+import { InMemoryDataService } from './search/in-memory-data.service';
 
 @NgModule({
   declarations: [
