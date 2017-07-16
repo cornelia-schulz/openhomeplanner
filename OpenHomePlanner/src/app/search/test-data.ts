@@ -77,8 +77,12 @@ export function createTestProperties(){
             street: '12 Smith Street',
             city: 'Auckland',
             postcode: 2015,
+            region: {
+              name: 'Manukau City',
+              suburb: { name: 'Beachlands'}
+            },
             suburb: {
-              name: 'Manukau'
+              name: 'Beachlands'
             }
         },
           openHomeFromTime: 'Tue May 23 2017 14:10:12 GMT+1200',

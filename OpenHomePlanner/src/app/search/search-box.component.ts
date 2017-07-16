@@ -2,6 +2,7 @@ import { Component, Output, EventEmitter, OnInit, Input } from '@angular/core';
 import { Region } from './model';
 import { District } from './model';
 import { Suburb } from './model';
+import { SearchCriteria } from './model';
 import { DataService } from './data.service';
 import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
 import { IMultiSelectTexts } from 'angular-2-dropdown-multiselect';
@@ -13,7 +14,7 @@ import { DisplayResultBoxComponent } from './display-result-box.component';
 @Component({
     moduleId: module.id,
     selector: 'search-box',
-    outputs: ['setDate'],
+    outputs: ['setSearch', 'setRegions'],
     templateUrl: './search-box.component.html',
     styleUrls: ['search-box.component.css']
 })
@@ -40,8 +41,8 @@ export class SearchBoxComponent implements OnInit {
     minBathrooms: string;
     maxBathrooms: string;
     priceOptions: number[];
-    minPrice: number;
-    maxPrice: number;
+    minPrice: string;
+    maxPrice: string;
 
     propertyTypeOptions: IMultiSelectOption[];
     selectedPropertyTypes: number[];
@@ -50,7 +51,9 @@ export class SearchBoxComponent implements OnInit {
     currentMonth = this.today.getMonth() + 1;
     currentDay = this.today.getDate();
     selectedDate: any;
-    public setDate: EventEmitter<any> = new EventEmitter();
+    searchCriteria: SearchCriteria;
+    public setSearch: EventEmitter<any> = new EventEmitter();
+    public setRegions: EventEmitter<any> = new EventEmitter();
 
     constructor(private dataService: DataService) { }
 
@@ -85,6 +88,12 @@ export class SearchBoxComponent implements OnInit {
             2500000, 3000000];
         this.minBedrooms = 'Any';
         this.maxBedrooms = 'Any';
+        this.minBathrooms = 'Any';
+        this.maxBathrooms = 'Any';
+        this.minPrice = 'Any';
+        this.maxPrice = 'Any';
+        this.selectedDate = { year: this.currentYear, month: this.currentMonth, day: this.currentDay };
+
 
         this.propertyTypeOptions = [{ id: 1, name: 'Apartment' },
         { id: 2, name: 'House' },
@@ -98,6 +107,7 @@ export class SearchBoxComponent implements OnInit {
     getRegions() {
         this.dataService.getRegions().subscribe(regs => {
             this.regions = regs;
+            this.setRegions.emit(this.regions);
         }, (errorMsg: string) => {
             alert(errorMsg);
         });
@@ -121,40 +131,10 @@ export class SearchBoxComponent implements OnInit {
 
     getSelectedSuburbs() {
         for (var i = 0; i < this.selectedSuburbs.length; i++) {
-            //
+            //console.log(this.selectedSuburbs[i]);
         }
     }
 
-
-    getMinBedrooms(event: Event) {
-        console.log("Min Bedrooms: " + this.minBedrooms);
-        return this.minBedrooms;
-    }
-
-    getMaxBedrooms(event: Event) {
-        console.log("Max Bedrooms: " + this.maxBedrooms);
-        return this.maxBedrooms;
-    }
-
-    getMinBathrooms(event: Event) {
-        console.log("Min Bathrooms: " + this.minBathrooms);
-        return this.minBathrooms;
-    }
-
-    getMaxBathrooms(event: Event) {
-        console.log("Max Bathrooms: " + this.maxBathrooms);
-        return this.maxBathrooms;
-    }
-
-    getMinPrice(event: Event) {
-        console.log("Min Price: " + this.minPrice);
-        return this.minPrice;
-    }
-
-    getMaxPrice(event: Event) {
-        console.log("Max Price: " + this.maxPrice);
-        return this.maxPrice;
-    }
 
     propertyTypeTexts: IMultiSelectTexts = {
         checkAll: 'Select all',
@@ -179,8 +159,31 @@ export class SearchBoxComponent implements OnInit {
 
     onDateChanged(event: IMyDateModel) {
         this.selectedDate = event.date;
-        this.setDate.emit(this.selectedDate);
-        return this.selectedDate;
+        //this.setDate.emit(this.selectedDate);
+        //return this.selectedDate;
+    }
+
+    onSearch(event: Event){
+        if(this.selectedSuburbs === undefined || this.selectedPropertyTypes === undefined){
+            alert("Please make sure you have selected at least one suburb and at least one property type.");
+        }
+        else {
+            this.searchCriteria = {
+            minBedrooms: this.minBedrooms,
+            maxBedrooms: this.maxBedrooms,
+            minPrice: this.minPrice,
+            maxPrice: this.maxPrice,
+            openHomeDate: this.selectedDate,
+            propertyType: this.selectedPropertyTypes,
+            region: this.selectedRegion,
+            district: this.selectedDistrict,
+            suburb: this.selectedSuburbs,
+            minBathrooms: this.minBathrooms,
+            maxBathrooms: this.maxBathrooms
+        }
+        this.setSearch.emit(this.searchCriteria);
+        }
+        
     }
 
 

@@ -1,21 +1,29 @@
 import { Component, Input, Output, EventEmitter, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { DataService } from './data.service';
 import { Property } from './model';
+import { SearchCriteria, Region, District, Suburb } from './model';
 
 
 @Component({
     moduleId: module.id,
     selector: 'display-result-box',
-    inputs: ['selectedDate'],
+    inputs: ['selectedDate', 'searchCriteria', 'regions', 'districts', 'suburbs'],
     templateUrl: './display-result-box.component.html',
     styleUrls: ['display-result-box.component.css']
 })
 
 export class DisplayResultBoxComponent implements OnInit {
     properties: Property[];
-    sortedProperties: Property[];
     title = "Open Homes scheduled for ";
     public selectedDate: any;
+    public searchCriteria: SearchCriteria;
+    filteredProperties: Property[];
+    today = new Date();
+    public regions: Region[];
+    public districts: District[];
+    public suburbs: Suburb[];
+    region: any;
+    
 
     get dateText(): string {
         if (this.selectedDate) {
@@ -27,12 +35,25 @@ export class DisplayResultBoxComponent implements OnInit {
     constructor(private dataService: DataService) { }
     ngOnInit() {
         this.getProperties();
+        
+        console.log("searchCriteria:");
+        console.log(this.searchCriteria);
+         console.log(this.searchCriteria.region);
+         this.region = this.searchCriteria.region;
+         console.log(this.region.name);
+        console.log("result regions:");
+        console.log(this.regions);
+        console.log(this.regions[0].district);
+        console.log(this.regions[0].name);
 
-    }
+        this.getPropertiesThatMatchSearchCriteria();
+        }
 
     getProperties() {
         this.dataService.getProperties().subscribe(props => {
             this.properties = props;
+            console.log("properties")
+            console.log(this.properties);
             this.properties.sort(function (a, b) {
                 if (a.openHomeFromTime < b.openHomeFromTime) {
                     return -1;
@@ -42,9 +63,28 @@ export class DisplayResultBoxComponent implements OnInit {
                 }
                 else return 0;
             })
+            return this.properties;
         }, (errorMsg: string) => {
             alert(errorMsg);
         });
+    }
+
+
+
+    getPropertiesThatMatchSearchCriteria(){
+        this.getProperties();
+        for(var i= 0; i < this.properties.length; i++){
+            this.searchCriteria.region;
+            for(var j = 0; j < this.searchCriteria.region.length; j++){
+                if(this.region.name === this.properties[i].address.city){
+                   this.filteredProperties.push(this.properties[i]);
+                }
+            }
+            
+        }
+        this.filteredProperties = this.properties;
+        console.log("Filtered Properties:")
+        console.log(this.filteredProperties);
     }
 
     removePropertyfromList() {

@@ -1,3 +1,4 @@
+
 export class Region {
   id: number;
   name: string;
@@ -18,6 +19,7 @@ export class Address {
   city: string;
   postcode: number;
   suburb: Suburb;
+  region: Region;
 }
 
 export class Property {
@@ -34,6 +36,17 @@ export class Property {
   description: string;
 }
 
-/*
-export class
- */
+export class SearchCriteria{
+  minBedrooms: any;
+  maxBedrooms: any;
+  minPrice: any;
+  maxPrice: any;
+  openHomeDate: any;
+  region: number[];
+  district: number[];
+  propertyType: number[];
+  suburb: number[];
+  minBathrooms: any;
+  maxBathrooms: any;
+}
+ 
