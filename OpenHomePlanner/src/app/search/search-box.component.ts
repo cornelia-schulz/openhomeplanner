@@ -1,4 +1,6 @@
 import { Component, Output, EventEmitter, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { Region } from './model';
 import { District } from './model';
 import { Suburb } from './model';
@@ -55,7 +57,10 @@ export class SearchBoxComponent implements OnInit {
     public setSearch: EventEmitter<any> = new EventEmitter();
     public setRegions: EventEmitter<any> = new EventEmitter();
 
-    constructor(private dataService: DataService) { }
+    constructor(private dataService: DataService,
+                private router: Router) {
+
+    }
 
     // style suburb list
     suburbTexts: IMultiSelectTexts = {
@@ -163,27 +168,28 @@ export class SearchBoxComponent implements OnInit {
         //return this.selectedDate;
     }
 
-    onSearch(event: Event){
-        if(this.selectedSuburbs === undefined || this.selectedPropertyTypes === undefined){
+    onSearch(event: Event) {
+        if (this.selectedSuburbs === undefined || this.selectedPropertyTypes === undefined) {
             alert("Please make sure you have selected at least one suburb and at least one property type.");
         }
         else {
-            this.searchCriteria = {
-            minBedrooms: this.minBedrooms,
-            maxBedrooms: this.maxBedrooms,
-            minPrice: this.minPrice,
-            maxPrice: this.maxPrice,
-            openHomeDate: this.selectedDate,
-            propertyType: this.selectedPropertyTypes,
-            region: this.selectedRegion,
-            district: this.selectedDistrict,
-            suburb: this.selectedSuburbs,
-            minBathrooms: this.minBathrooms,
-            maxBathrooms: this.maxBathrooms
+            let searchCriteria = {
+                minBedrooms: this.minBedrooms,
+                maxBedrooms: this.maxBedrooms,
+                minPrice: this.minPrice,
+                maxPrice: this.maxPrice,
+                openHomeDate: this.selectedDate,
+                propertyType: this.selectedPropertyTypes,
+                region: this.selectedRegion,
+                district: this.selectedDistrict,
+                suburb: this.selectedSuburbs,
+                minBathrooms: this.minBathrooms,
+                maxBathrooms: this.maxBathrooms
+            }
+            // this.setSearch.emit(this.searchCriteria);
+            this.router.navigate(['/results', searchCriteria]);
         }
-        this.setSearch.emit(this.searchCriteria);
-        }
-        
+
     }
 
 

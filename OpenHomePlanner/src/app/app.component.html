@@ -1,10 +1,6 @@
+<h1>
+    {{title}}</h1>
+<img class="banner" src="/images/howick.jpg" alt="howick">
 
-<h1>{{title}}</h1>
-    <img class="banner" src="/images/howick.jpg" alt="howick">
-    <div class="search">
-    <search-box (setSearch)="onSearch($event)" (setRegions)="getRegions($event)"></search-box>
-    </div>
-    <hr />
-    <div class="results">
-        <display-result-box [selectedDate]="selectedDate" [searchCriteria]="searchCriteria" [regions]="regions"  *ngIf="searchResultsAvailable"></display-result-box>
-    </div>
+<base href="/">
+<router-outlet></router-outlet>
