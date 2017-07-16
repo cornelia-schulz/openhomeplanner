@@ -9,8 +9,6 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 
-import { createTestRegions } from './test-data';
-import { createTestProperties } from './test-data';
 import { Region } from './model';
 import { Property } from './model';
 

@@ -14,4 +14,9 @@ export class ResultsComponent {
   onSearch(event: IMyDateModel) {
     this.selectedDate = event;
   }
+
+  getRegions(event){
+    //todo
+  }
+
 }

@@ -42,7 +42,7 @@ export class SearchCriteria{
   minPrice: any;
   maxPrice: any;
   openHomeDate: any;
-  region: number[];
+  region: string[];
   district: number[];
   propertyType: number[];
   suburb: number[];

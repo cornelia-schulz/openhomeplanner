@@ -173,20 +173,23 @@ export class SearchBoxComponent implements OnInit {
             alert("Please make sure you have selected at least one suburb and at least one property type.");
         }
         else {
+            debugger;
             let searchCriteria = {
                 minBedrooms: this.minBedrooms,
                 maxBedrooms: this.maxBedrooms,
                 minPrice: this.minPrice,
                 maxPrice: this.maxPrice,
-                openHomeDate: this.selectedDate,
+                openHomeDate: this.selectedDate.day+"-"+this.selectedDate.month+"-"+this.selectedDate.year,
                 propertyType: this.selectedPropertyTypes,
-                region: this.selectedRegion,
-                district: this.selectedDistrict,
+                region: this.selectedRegion.name,
+                district: this.selectedDistrict.name,
                 suburb: this.selectedSuburbs,
                 minBathrooms: this.minBathrooms,
                 maxBathrooms: this.maxBathrooms
             }
             // this.setSearch.emit(this.searchCriteria);
+            console.log("log date:");
+            console.log(searchCriteria.district);
             this.router.navigate(['/results', searchCriteria]);
         }
 
