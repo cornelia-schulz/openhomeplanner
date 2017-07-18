@@ -10,8 +10,8 @@ import { ResultsComponent } from './results.component';
 
 // Route Configuration
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'results', component: ResultsComponent }
+  { path: 'test', component: HomeComponent },
+  { path: 'test/results', component: ResultsComponent }
 ];
 
 // Deprecated provide

@@ -115,7 +115,7 @@ export function createTestProperties() {
     {
       id: 3,
       bedrooms: 3,
-      bathrooms: 1,
+      bathrooms: 2,
       price: 897697,
       address: {
         street: '123 Queen Street',
@@ -130,6 +130,86 @@ export function createTestProperties() {
       openHomeDate: 'Tue May 23 2017 15:18:12 GMT+1200',
       image: '/images/house2.jpg',
       title: 'Magnificent house',
+      description: 'Lorem Ipsum Housum Lorem Ipsum HousumLorem Ipsum HousumLorem Ipsum Housum'
+    },
+    {
+      id: 4,
+      bedrooms: 1,
+      bathrooms: 1,
+      price: 797697,
+      address: {
+        street: '163 Queen Street',
+        city: 'Auckland',
+        postcode: 2010,
+        suburb: {
+          name: 'City Centre'
+        }
+      },
+      openHomeFromTime: 'Wed May 24 2017 15:18:12 GMT+1200',
+      openHomeToTime: 'Wed May 24 2017 15:48:12 GMT+1200',
+      openHomeDate: 'Tue May 23 2017 15:18:12 GMT+1200',
+      image: '/images/house2.jpg',
+      title: 'Superb house',
+      description: 'Lorem Ipsum Housum Lorem Ipsum HousumLorem Ipsum HousumLorem Ipsum Housum'
+    },
+    {
+      id: 5,
+      bedrooms: 3,
+      bathrooms: 3,
+      price: 997697,
+      address: {
+        street: '12 Queen Street',
+        city: 'Auckland',
+        postcode: 2010,
+        suburb: {
+          name: 'City Centre'
+        }
+      },
+      openHomeFromTime: 'Tue Dec 12 2017 15:18:12 GMT+1200',
+      openHomeToTime: 'Tue Dec 12 2017 15:48:12 GMT+1200',
+      openHomeDate: 'Tue Dec 12 2017 15:18:12 GMT+1200',
+      image: '/images/house2.jpg',
+      title: 'Yabadabadoo house',
+      description: 'Lorem Ipsum Housum Lorem Ipsum HousumLorem Ipsum HousumLorem Ipsum Housum'
+    },
+    {
+      id: 6,
+      bedrooms: 2,
+      bathrooms: 2,
+      price: 997697,
+      address: {
+        street: '13 Queen Street',
+        city: 'Auckland',
+        postcode: 2010,
+        suburb: {
+          name: 'City Centre'
+        }
+      },
+      openHomeFromTime: 'Tue Dec 12 2017 16:18:12 GMT+1200',
+      openHomeToTime: 'Tue Dec 12 2017 16:48:12 GMT+1200',
+      openHomeDate: 'Tue Dec 12 2017 16:18:12 GMT+1200',
+      image: '/images/house2.jpg',
+      title: 'Flower house',
+      description: 'Lorem Ipsum Housum Lorem Ipsum HousumLorem Ipsum HousumLorem Ipsum Housum'
+    },
+    {
+      id: 7,
+      bedrooms: 5,
+      bathrooms: 4,
+      price: 897697,
+      address: {
+        street: '323 Queen Street',
+        city: 'Auckland',
+        postcode: 2010,
+        suburb: {
+          name: 'City Centre'
+        }
+      },
+      openHomeFromTime: 'Tue Dec 12 2017 15:18:12 GMT+1200',
+      openHomeToTime: 'Tue Dec 12 2017 15:48:12 GMT+1200',
+      openHomeDate: 'Tue Dec 12 2017 15:18:12 GMT+1200',
+      image: '/images/house2.jpg',
+      title: 'Yummy house',
       description: 'Lorem Ipsum Housum Lorem Ipsum HousumLorem Ipsum HousumLorem Ipsum Housum'
     }
   ]

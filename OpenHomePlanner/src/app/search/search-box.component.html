@@ -18,7 +18,12 @@
 <div class="col-md-4">
 <fieldset class="selector">
   <label>Suburb:</label><br />
-  <ss-multiselect-dropdown [disabled]="suburbsDisabled" class="search-selector" [options]="suburbOptions" [texts]="suburbTexts" [settings]="suburbListSettings" [(ngModel)]="selectedSuburbs"(ngModelChange)="getSelectedSuburbs($event)">
+  <ss-multiselect-dropdown [disabled]="suburbsDisabled" 
+                            class="search-selector"
+                            [options]="suburbOptions" 
+                            [texts]="suburbTexts" 
+                            [settings]="suburbListSettings" 
+                            [(ngModel)]="selectedSuburbs" >
   </ss-multiselect-dropdown>
 </fieldset>
 </div>
@@ -89,7 +94,7 @@
     <div class="col-md-4">
         <fieldset class="selector">
             <label class="white">Search</label><br/>
-            <button class="search-button btn btn-primary" (click)="onSearch()">Search</button>
+            <button class="search-button btn btn-primary" (click)="onSearch($event)">Search</button>
         </fieldset>
     </div>
 </div>

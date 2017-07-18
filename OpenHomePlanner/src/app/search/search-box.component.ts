@@ -53,7 +53,6 @@ export class SearchBoxComponent implements OnInit {
     currentMonth = this.today.getMonth() + 1;
     currentDay = this.today.getDate();
     selectedDate: any;
-    searchCriteria: SearchCriteria;
     public setSearch: EventEmitter<any> = new EventEmitter();
     public setRegions: EventEmitter<any> = new EventEmitter();
 
@@ -134,7 +133,7 @@ export class SearchBoxComponent implements OnInit {
         this.suburbsDisabled = false;
     }
 
-    getSelectedSuburbs() {
+    getSelectedSuburbs(event: Event) {
         for (var i = 0; i < this.selectedSuburbs.length; i++) {
             //console.log(this.selectedSuburbs[i]);
         }
@@ -156,11 +155,11 @@ export class SearchBoxComponent implements OnInit {
         displayAllSelectedText: true
     }
 
-    private myDatePickerOptions: IMyOptions = {
+    public myDatePickerOptions: IMyOptions = {
         dateFormat: 'dd/mm/yyyy'
     }
 
-    private model: Object = { date: { year: this.currentYear, month: this.currentMonth, day: this.currentDay } };
+    public model: Object = { date: { year: this.currentYear, month: this.currentMonth, day: this.currentDay } };
 
     onDateChanged(event: IMyDateModel) {
         this.selectedDate = event.date;
@@ -173,7 +172,6 @@ export class SearchBoxComponent implements OnInit {
             alert("Please make sure you have selected at least one suburb and at least one property type.");
         }
         else {
-            debugger;
             let searchCriteria = {
                 minBedrooms: this.minBedrooms,
                 maxBedrooms: this.maxBedrooms,
@@ -187,10 +185,12 @@ export class SearchBoxComponent implements OnInit {
                 minBathrooms: this.minBathrooms,
                 maxBathrooms: this.maxBathrooms
             }
+
+            if(searchCriteria.minBedrooms == 'any') searchCriteria.minBedrooms 
             // this.setSearch.emit(this.searchCriteria);
             console.log("log date:");
             console.log(searchCriteria.district);
-            this.router.navigate(['/results', searchCriteria]);
+            this.router.navigate(['/test/results', searchCriteria]);
         }
 
     }
