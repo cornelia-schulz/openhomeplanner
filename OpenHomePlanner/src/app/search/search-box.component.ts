@@ -119,13 +119,13 @@ export class SearchBoxComponent implements OnInit {
 
     getDistricts(event: Event): void {
         this.region = this.selectedRegion;
-        this.districts = this.region.district;
+        this.districts = this.region.districts;
         this.districtsDisabled = false;
     }
 
     getSuburbs(event: Event): void {
         this.district = this.selectedDistrict;
-        this.suburbs = this.district.suburb;
+        this.suburbs = this.district.suburbs;
 
         for (var i = 0; i < this.suburbs.length; i++) {
             this.suburbOptions.push({ id: i, name: this.suburbs[i].name })

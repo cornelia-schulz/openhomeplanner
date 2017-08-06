@@ -30,7 +30,7 @@ import { InMemoryDataService } from './search/in-memory-data.service';
     HttpModule,
     MultiselectDropdownModule,
     MyDatePickerModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    // InMemoryWebApiModule.forRoot(InMemoryDataService),
     routing
   ],
   providers: [

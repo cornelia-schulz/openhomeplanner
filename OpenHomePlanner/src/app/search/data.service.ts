@@ -15,14 +15,13 @@ import { Property } from './model';
 @Injectable()
 export class DataService {
     private regionUrl = 'api/regions';
-    private propertyUrl = 'api/properties';
+    private propertyUrl = 'api/search';
 
     constructor(
         private http: Http,
     ){}
 
     getRegions(): Observable<Region[]>{
-        console.log('getregions')
         return this.http.get(this.regionUrl)
             .map(response => response.json().data as Region[])
             .catch((error: any) => {

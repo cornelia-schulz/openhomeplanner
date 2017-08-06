@@ -4,8 +4,8 @@ import { createTestRegions, createTestProperties } from './test-data';
 export class InMemoryDataService implements InMemoryDbService{
     createDb(){
         return {
-            regions: createTestRegions(),
-            properties: createTestProperties()
+            regions: createTestRegions()
+           // ,properties: createTestProperties()
         }
     }
 }

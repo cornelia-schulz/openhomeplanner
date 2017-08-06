@@ -13,6 +13,7 @@ export class ResultsComponent {
 
   onSearch(event: IMyDateModel) {
     this.selectedDate = event;
+    console.log(this.selectedDate);
   }
 
   getRegions(event){

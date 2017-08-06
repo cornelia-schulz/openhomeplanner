@@ -47,6 +47,7 @@ export class DisplayResultBoxComponent implements OnInit {
         this.searchCriteria.maxBedrooms = params.maxBedrooms;
         this.searchCriteria.maxPrice = params.maxPrice;
         this.searchCriteria.openHomeDate = params.openHomeDate;
+        this.searchCriteria.propertyType = params.propertyType.split(',');
         console.log(this.searchCriteria.openHomeDate);
 
         this.getProperties();

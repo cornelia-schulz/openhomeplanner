@@ -2,12 +2,12 @@
 export function createTestRegions() {
   return [
     {
-      id: 1,
-      name: 'Auckland',
-      district: [
+      "id": 1,
+      name: 'Auckland', 
+      districts: [
         {
           name: 'Manukau City',
-          suburb: [
+          suburbs: [
             { name: 'Howick' },
             { name: 'Beachlands' },
             { name: 'Clevedon' },
@@ -16,7 +16,7 @@ export function createTestRegions() {
         },
         {
           name: 'Franklin',
-          suburb: [
+          suburbs: [
             { name: 'Buckland' },
             { name: 'Clarks Beach' },
             { name: 'Hunua' }
@@ -24,7 +24,7 @@ export function createTestRegions() {
         },
         {
           name: 'Auckland City',
-          suburb: [
+          suburbs: [
             { name: 'City Centre' },
             { name: 'Epsom' },
             { name: 'Freemans Bay' }
@@ -35,10 +35,10 @@ export function createTestRegions() {
     {
       id: 2,
       name: 'Wellington',
-      district: [
+      districts: [
         {
           name: 'Upper Hut',
-          suburb: [
+          suburbs: [
             { name: 'Rimutaka' },
             { name: 'Birchville' },
             { name: 'Mangaroa' },
@@ -47,7 +47,7 @@ export function createTestRegions() {
         },
         {
           name: 'Lower Hutt',
-          suburb: [
+          suburbs: [
             { name: 'Petone' },
             { name: 'Kelson' },
             { name: 'Fairfield' }
@@ -55,7 +55,7 @@ export function createTestRegions() {
         },
         {
           name: 'Wellington City',
-          suburb: [
+          suburbs: [
             { name: 'City Centre' },
             { name: 'Mt Victoria' },
             { name: 'Newtown' }
@@ -79,9 +79,9 @@ export function createTestProperties() {
         postcode: 2015,
         region: {
           name: 'Manukau City',
-          suburb: { name: 'Beachlands' }
+          suburbs: { name: 'Beachlands' }
         },
-        suburb: {
+        suburbs: {
           name: 'Beachlands'
         }
       },
@@ -101,7 +101,7 @@ export function createTestProperties() {
         street: '2 Hanson Street',
         city: 'Wellington',
         postcode: 2015,
-        suburb: {
+        suburbs: {
           name: 'Newtown'
         }
       },
@@ -121,7 +121,7 @@ export function createTestProperties() {
         street: '123 Queen Street',
         city: 'Auckland',
         postcode: 2010,
-        suburb: {
+        suburbs: {
           name: 'City Centre'
         }
       },
@@ -141,7 +141,7 @@ export function createTestProperties() {
         street: '163 Queen Street',
         city: 'Auckland',
         postcode: 2010,
-        suburb: {
+        suburbs: {
           name: 'City Centre'
         }
       },
@@ -161,7 +161,7 @@ export function createTestProperties() {
         street: '12 Queen Street',
         city: 'Auckland',
         postcode: 2010,
-        suburb: {
+        suburbs: {
           name: 'City Centre'
         }
       },
@@ -181,7 +181,7 @@ export function createTestProperties() {
         street: '13 Queen Street',
         city: 'Auckland',
         postcode: 2010,
-        suburb: {
+        suburbs: {
           name: 'City Centre'
         }
       },
@@ -201,7 +201,7 @@ export function createTestProperties() {
         street: '323 Queen Street',
         city: 'Auckland',
         postcode: 2010,
-        suburb: {
+        suburbs: {
           name: 'City Centre'
         }
       },

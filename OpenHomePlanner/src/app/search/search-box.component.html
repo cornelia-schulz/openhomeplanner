@@ -23,7 +23,8 @@
                             [options]="suburbOptions" 
                             [texts]="suburbTexts" 
                             [settings]="suburbListSettings" 
-                            [(ngModel)]="selectedSuburbs" >
+                            [(ngModel)]="selectedSuburbs" 
+                            (ngModelChange)="getSelectedSuburbs($event)">
   </ss-multiselect-dropdown>
 </fieldset>
 </div>

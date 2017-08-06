@@ -157,6 +157,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Controllers\ApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestController.cs" />
@@ -166,6 +167,7 @@
     <Compile Include="Models\Listing.cs" />
     <Compile Include="Models\SearchCriteria.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\JsonResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap\css\bootstrap.css" />
@@ -228,8 +230,10 @@
     <Content Include="dist\vendor.bundle.js" />
     <Content Include="favicon.ico" />
     <Content Include="Files\InfoSmartPlugin.exe" />
+    <Content Include="fontawesome-webfont.912ec66d7572ff821749.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="glyphicons-halflings-regular.683eaa4b54a330dfdf24.svg" />
     <Content Include="images\house0.jpg" />
     <Content Include="images\house1.jpg" />
     <Content Include="images\house2.jpg" />
@@ -258,6 +262,13 @@
     <Content Include="dist\glyphicons-halflings-regular.47da44498fc073d9fff9.ttf" />
     <Content Include="dist\glyphicons-halflings-regular.5eae1f7217b606d3580d.woff" />
     <Content Include="dist\glyphicons-halflings-regular.aa16cd35628e6dddf56e.eot" />
+    <Content Include="fontawesome-webfont.674f50d287a8c48dc19b.eot" />
+    <Content Include="fontawesome-webfont.af7ae505a9eed503f8b8.woff2" />
+    <Content Include="fontawesome-webfont.b06871f281fee6b241d6.ttf" />
+    <Content Include="fontawesome-webfont.fee66e712a8a08eef580.woff" />
+    <Content Include="glyphicons-halflings-regular.47da44498fc073d9fff9.ttf" />
+    <Content Include="glyphicons-halflings-regular.5eae1f7217b606d3580d.woff" />
+    <Content Include="glyphicons-halflings-regular.aa16cd35628e6dddf56e.eot" />
     <None Include="Properties\PublishProfiles\OpenHomeFinder - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\OpenHomePlanner - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

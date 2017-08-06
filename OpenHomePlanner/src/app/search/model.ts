@@ -2,12 +2,12 @@
 export class Region {
   id: number;
   name: string;
-  district: District[];
+  districts: District[];
 }
 
 export class District {
   name: string;
-  suburb: Suburb[];
+  suburbs: Suburb[];
 }
 
 export class Suburb {
@@ -30,23 +30,22 @@ export class Property {
   address: Address;
   openHomeFromTime: Date;
   openHomeToTime: Date;
-  openHomeDate: Date;
   image: string;
   title: string;
   description: string;
 }
 
 export class SearchCriteria{
-  minBedrooms: any;
-  maxBedrooms: any;
-  minPrice: any;
-  maxPrice: any;
+  minBedrooms?: any;
+  maxBedrooms?: any;
+  minPrice?: any;
+  maxPrice?: any;
   openHomeDate: any;
   region: string[];
   district: number[];
   propertyType: number[];
   suburb: number[];
-  minBathrooms: any;
-  maxBathrooms: any;
+  minBathrooms?: any;
+  maxBathrooms?: any;
 }
  

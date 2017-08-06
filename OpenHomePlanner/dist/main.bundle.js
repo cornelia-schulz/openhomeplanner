@@ -1,6 +1,6 @@
 webpackJsonp([2,5],{
 
-/***/ 103:
+/***/ 101:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -9,20 +9,20 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 103;
+webpackEmptyContext.id = 101;
 
 
 /***/ }),
 
-/***/ 104:
+/***/ 102:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(118);
 
 
 
@@ -35,11 +35,11 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 113:
+/***/ 112:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -66,7 +66,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'app-root',
-        template: __webpack_require__(208)
+        template: __webpack_require__(203)
     })
 ], AppComponent);
 
@@ -74,25 +74,23 @@ AppComponent = __decorate([
 
 /***/ }),
 
-/***/ 114:
+/***/ 113:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_2_dropdown_multiselect__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_mydatepicker__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_component__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__results_component__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__search_search_box_component__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__search_display_result_box_component__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__search_data_service__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_routes__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angular_in_memory_web_api__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__search_in_memory_data_service__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_2_dropdown_multiselect__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_mydatepicker__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_component__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__results_component__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__search_search_box_component__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__search_display_result_box_component__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__search_data_service__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_routes__ = __webpack_require__(114);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -100,8 +98,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
 
 
 
@@ -135,7 +131,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_4_angular_2_dropdown_multiselect__["a" /* MultiselectDropdownModule */],
             __WEBPACK_IMPORTED_MODULE_5_mydatepicker__["MyDatePickerModule"],
-            __WEBPACK_IMPORTED_MODULE_13_angular_in_memory_web_api__["a" /* InMemoryWebApiModule */].forRoot(__WEBPACK_IMPORTED_MODULE_14__search_in_memory_data_service__["a" /* InMemoryDataService */]),
+            // InMemoryWebApiModule.forRoot(InMemoryDataService),
             __WEBPACK_IMPORTED_MODULE_12__app_routes__["a" /* routing */]
         ],
         providers: [
@@ -149,13 +145,13 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 115:
+/***/ 114:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_component__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__results_component__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_component__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__results_component__ = __webpack_require__(71);
 /* unused harmony export routes */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return routing; });
 // ====== ./app/app.routes.ts ======
@@ -176,14 +172,14 @@ var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule 
 
 /***/ }),
 
-/***/ 116:
+/***/ 115:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_service__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__model__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_service__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__model__ = __webpack_require__(116);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DisplayResultBoxComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -273,8 +269,8 @@ var DisplayResultBoxComponent = (function () {
 DisplayResultBoxComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'display-result-box',
-        template: __webpack_require__(211),
-        styles: [__webpack_require__(181)]
+        template: __webpack_require__(206),
+        styles: [__webpack_require__(176)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__data_service__["a" /* DataService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */]) === "function" && _b || Object])
 ], DisplayResultBoxComponent);
@@ -284,30 +280,7 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 117:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__test_data__ = __webpack_require__(120);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InMemoryDataService; });
-
-var InMemoryDataService = (function () {
-    function InMemoryDataService() {
-    }
-    InMemoryDataService.prototype.createDb = function () {
-        return {
-            regions: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__test_data__["a" /* createTestRegions */])(),
-            properties: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__test_data__["b" /* createTestProperties */])()
-        };
-    };
-    return InMemoryDataService;
-}());
-
-//# sourceMappingURL=in-memory-data.service.js.map
-
-/***/ }),
-
-/***/ 118:
+/***/ 116:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -357,13 +330,13 @@ var SearchCriteria = (function () {
 
 /***/ }),
 
-/***/ 119:
+/***/ 117:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_service__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_service__ = __webpack_require__(36);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchBoxComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -461,12 +434,12 @@ var SearchBoxComponent = (function () {
     };
     SearchBoxComponent.prototype.getDistricts = function (event) {
         this.region = this.selectedRegion;
-        this.districts = this.region.district;
+        this.districts = this.region.districts;
         this.districtsDisabled = false;
     };
     SearchBoxComponent.prototype.getSuburbs = function (event) {
         this.district = this.selectedDistrict;
-        this.suburbs = this.district.suburb;
+        this.suburbs = this.district.suburbs;
         for (var i = 0; i < this.suburbs.length; i++) {
             this.suburbOptions.push({ id: i, name: this.suburbs[i].name });
         }
@@ -514,8 +487,8 @@ SearchBoxComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'search-box',
         outputs: ['setSearch', 'setRegions'],
-        template: __webpack_require__(212),
-        styles: [__webpack_require__(182)]
+        template: __webpack_require__(207),
+        styles: [__webpack_require__(177)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__data_service__["a" /* DataService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _b || Object])
 ], SearchBoxComponent);
@@ -525,232 +498,7 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 120:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = createTestRegions;
-/* harmony export (immutable) */ __webpack_exports__["b"] = createTestProperties;
-function createTestRegions() {
-    return [
-        {
-            id: 1,
-            name: 'Auckland',
-            district: [
-                {
-                    name: 'Manukau City',
-                    suburb: [
-                        { name: 'Howick' },
-                        { name: 'Beachlands' },
-                        { name: 'Clevedon' },
-                        { name: 'Cockle Bay' }
-                    ]
-                },
-                {
-                    name: 'Franklin',
-                    suburb: [
-                        { name: 'Buckland' },
-                        { name: 'Clarks Beach' },
-                        { name: 'Hunua' }
-                    ]
-                },
-                {
-                    name: 'Auckland City',
-                    suburb: [
-                        { name: 'City Centre' },
-                        { name: 'Epsom' },
-                        { name: 'Freemans Bay' }
-                    ]
-                }
-            ]
-        },
-        {
-            id: 2,
-            name: 'Wellington',
-            district: [
-                {
-                    name: 'Upper Hut',
-                    suburb: [
-                        { name: 'Rimutaka' },
-                        { name: 'Birchville' },
-                        { name: 'Mangaroa' },
-                        { name: 'Pinehaven' }
-                    ]
-                },
-                {
-                    name: 'Lower Hutt',
-                    suburb: [
-                        { name: 'Petone' },
-                        { name: 'Kelson' },
-                        { name: 'Fairfield' }
-                    ]
-                },
-                {
-                    name: 'Wellington City',
-                    suburb: [
-                        { name: 'City Centre' },
-                        { name: 'Mt Victoria' },
-                        { name: 'Newtown' }
-                    ]
-                }
-            ]
-        }
-    ];
-}
-function createTestProperties() {
-    return [
-        {
-            id: 1,
-            bedrooms: 3,
-            bathrooms: 1,
-            price: 1655697,
-            address: {
-                street: '12 Smith Street',
-                city: 'Auckland',
-                postcode: 2015,
-                region: {
-                    name: 'Manukau City',
-                    suburb: { name: 'Beachlands' }
-                },
-                suburb: {
-                    name: 'Beachlands'
-                }
-            },
-            openHomeFromTime: 'Tue May 23 2017 14:10:12 GMT+1200',
-            openHomeToTime: 'Tue May 23 2017 14:40:12 GMT+1200',
-            openHomeDate: 'Tue May 23 2017 15:18:12 GMT+1200',
-            image: '/images/house0.jpg',
-            title: 'Beautiful house',
-            description: 'Lorem Ipsum Housum Lorem Ipsum HousumLorem Ipsum HousumLorem Ipsum Housum'
-        },
-        {
-            id: 2,
-            bedrooms: 3,
-            bathrooms: 1,
-            price: 345697,
-            address: {
-                street: '2 Hanson Street',
-                city: 'Wellington',
-                postcode: 2015,
-                suburb: {
-                    name: 'Newtown'
-                }
-            },
-            openHomeFromTime: 'Tue May 23 2017 12:00:12 GMT+1200',
-            openHomeToTime: 'Tue May 23 2017 12:30:12 GMT+1200',
-            openHomeDate: 'Tue May 23 2017 15:18:12 GMT+1200',
-            image: '/images/house1.jpg',
-            title: 'Something Something house',
-            description: 'Lorem Ipsum Housum Lorem Ipsum HousumLorem Ipsum HousumLorem Ipsum Housum'
-        },
-        {
-            id: 3,
-            bedrooms: 3,
-            bathrooms: 2,
-            price: 897697,
-            address: {
-                street: '123 Queen Street',
-                city: 'Auckland',
-                postcode: 2010,
-                suburb: {
-                    name: 'City Centre'
-                }
-            },
-            openHomeFromTime: 'Tue May 23 2017 15:18:12 GMT+1200',
-            openHomeToTime: 'Tue May 23 2017 15:48:12 GMT+1200',
-            openHomeDate: 'Tue May 23 2017 15:18:12 GMT+1200',
-            image: '/images/house2.jpg',
-            title: 'Magnificent house',
-            description: 'Lorem Ipsum Housum Lorem Ipsum HousumLorem Ipsum HousumLorem Ipsum Housum'
-        },
-        {
-            id: 4,
-            bedrooms: 1,
-            bathrooms: 1,
-            price: 797697,
-            address: {
-                street: '163 Queen Street',
-                city: 'Auckland',
-                postcode: 2010,
-                suburb: {
-                    name: 'City Centre'
-                }
-            },
-            openHomeFromTime: 'Wed May 24 2017 15:18:12 GMT+1200',
-            openHomeToTime: 'Wed May 24 2017 15:48:12 GMT+1200',
-            openHomeDate: 'Tue May 23 2017 15:18:12 GMT+1200',
-            image: '/images/house2.jpg',
-            title: 'Superb house',
-            description: 'Lorem Ipsum Housum Lorem Ipsum HousumLorem Ipsum HousumLorem Ipsum Housum'
-        },
-        {
-            id: 5,
-            bedrooms: 3,
-            bathrooms: 3,
-            price: 997697,
-            address: {
-                street: '12 Queen Street',
-                city: 'Auckland',
-                postcode: 2010,
-                suburb: {
-                    name: 'City Centre'
-                }
-            },
-            openHomeFromTime: 'Tue Dec 12 2017 15:18:12 GMT+1200',
-            openHomeToTime: 'Tue Dec 12 2017 15:48:12 GMT+1200',
-            openHomeDate: 'Tue Dec 12 2017 15:18:12 GMT+1200',
-            image: '/images/house2.jpg',
-            title: 'Yabadabadoo house',
-            description: 'Lorem Ipsum Housum Lorem Ipsum HousumLorem Ipsum HousumLorem Ipsum Housum'
-        },
-        {
-            id: 6,
-            bedrooms: 2,
-            bathrooms: 2,
-            price: 997697,
-            address: {
-                street: '13 Queen Street',
-                city: 'Auckland',
-                postcode: 2010,
-                suburb: {
-                    name: 'City Centre'
-                }
-            },
-            openHomeFromTime: 'Tue Dec 12 2017 16:18:12 GMT+1200',
-            openHomeToTime: 'Tue Dec 12 2017 16:48:12 GMT+1200',
-            openHomeDate: 'Tue Dec 12 2017 16:18:12 GMT+1200',
-            image: '/images/house2.jpg',
-            title: 'Flower house',
-            description: 'Lorem Ipsum Housum Lorem Ipsum HousumLorem Ipsum HousumLorem Ipsum Housum'
-        },
-        {
-            id: 7,
-            bedrooms: 5,
-            bathrooms: 4,
-            price: 897697,
-            address: {
-                street: '323 Queen Street',
-                city: 'Auckland',
-                postcode: 2010,
-                suburb: {
-                    name: 'City Centre'
-                }
-            },
-            openHomeFromTime: 'Tue Dec 12 2017 15:18:12 GMT+1200',
-            openHomeToTime: 'Tue Dec 12 2017 15:48:12 GMT+1200',
-            openHomeDate: 'Tue Dec 12 2017 15:18:12 GMT+1200',
-            image: '/images/house2.jpg',
-            title: 'Yummy house',
-            description: 'Lorem Ipsum Housum Lorem Ipsum HousumLorem Ipsum HousumLorem Ipsum Housum'
-        }
-    ];
-}
-;
-//# sourceMappingURL=test-data.js.map
-
-/***/ }),
-
-/***/ 121:
+/***/ 118:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -767,7 +515,7 @@ var environment = {
 
 /***/ }),
 
-/***/ 181:
+/***/ 176:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(17)(false);
@@ -785,7 +533,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 182:
+/***/ 177:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(17)(false);
@@ -803,68 +551,68 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 208:
+/***/ 203:
 /***/ (function(module, exports) {
 
 module.exports = "<h1>\r\n    {{title}}</h1>\r\n<img class=\"banner\" src=\"/images/howick.jpg\" alt=\"howick\">\r\n\r\n<base href=\"/\">\r\n<router-outlet></router-outlet>"
 
 /***/ }),
 
-/***/ 209:
+/***/ 204:
 /***/ (function(module, exports) {
 
 module.exports = "\r\n<div class=\"search\">\r\n    <search-box (setDate)=\"onSearch($event)\"></search-box>\r\n</div>\r\n\r\n\r\n<h3>I am the homepage!</h3>"
 
 /***/ }),
 
-/***/ 210:
+/***/ 205:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"search\">\r\n    <search-box (setSearch)=\"onSearch($event)\" (setRegions)=\"getRegions($event)\"></search-box>\r\n</div>\r\n<hr />\r\n<div class=\"results\">\r\n    <display-result-box ></display-result-box>\r\n</div>"
 
 /***/ }),
 
-/***/ 211:
+/***/ 206:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"result-list\">\r\n    <h2>{{title}} {{ dateText }}</h2>\r\n    <div>\r\n        <div id=\"results\" class=\"panel-group\">\r\n            <div class=\"panel panel-default\" *ngFor=\"let property of properties\">\r\n                <div class=\" panel-heading result-list-entry\">\r\n                    <div class=\"row\">\r\n                        <div class=\"col-md-2\">{{property.openHomeFromTime | date:'H:mm'}} - {{property.openHomeToTime | date:'H:mm'}}</div>\r\n                        <div class=\"col-md-9\">\r\n                            <h3>{{property.title}}</h3>, <i class=\"fa fa-bed\" aria-hidden=\"true\"></i> {{ property.bedrooms }},\r\n                            <i class=\"fa fa-bath\" aria-hidden=\"true\"></i> {{ property.bathrooms }}</div>\r\n                        <div class=\"col-md-1\">\r\n                            <a data-toggle=\"collapse\" data-parent=\"#results\" href=\"#{{property.id}}\">\r\n                            <i class=\"fa fa-caret-down\" aria-hidden=\"true\"></i>\r\n                        </a>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"row\">\r\n                        <div class=\"col-md-8 col-md-offset-2\">{{property.address.street}}, {{property.address.suburb.name}}, {{property.address.city}}</div>\r\n                    </div>\r\n                </div>\r\n                <div [attr.id]=\"property.id\" class=\"panel-collapse collapse\">\r\n                    <div class=\"panel-body\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-md-2\">\r\n                                <img class=\"property-img\" [src]=\"property.image\" alt=\"images of the property\">\r\n                            </div>\r\n                            <div class=\"col-md-10\">\r\n                                <p>Some info about this property. Some info about this property. Some info about this property.\r\n                                    Some info about this property. Some info about this property. Some info about this property.\r\n                                    Some info about this property. Some info about this property. Some info about this property.\r\n                                    Some info about this property. Some info about this property. Some info about this property.\r\n                                </p>\r\n                                <p>{{property.price | currency:'NZD'}}</p>\r\n                            </div>\r\n                        </div>\r\n\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>"
 
 /***/ }),
 
-/***/ 212:
+/***/ 207:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"region-search row\">\r\n  <div class=\"col-md-4\">\r\n    <fieldset class=\"selector\">\r\n      <label>Region:</label>\r\n      <select class=\"search-selector\" [(ngModel)]=\"selectedRegion\"(change)=\"getDistricts($event)\" >\r\n        <option *ngFor=\"let region of regions\" [ngValue]=\"region\">{{region.name}}</option>\r\n      </select>\r\n    </fieldset>\r\n </div>\r\n <div class=\"col-md-4\">\r\n<fieldset class=\"selector\">\r\n  <label>District:</label>\r\n  <select [disabled]=\"districtsDisabled\" class=\"search-selector\" [(ngModel)]=\"selectedDistrict\" (change)=\"getSuburbs($event)\">\r\n    <option *ngFor=\"let district of districts\" [ngValue]=\"district\">{{district.name}}</option>\r\n  </select>\r\n</fieldset>\r\n</div>\r\n<div class=\"col-md-4\">\r\n<fieldset class=\"selector\">\r\n  <label>Suburb:</label><br />\r\n  <ss-multiselect-dropdown [disabled]=\"suburbsDisabled\" \r\n                            class=\"search-selector\"\r\n                            [options]=\"suburbOptions\" \r\n                            [texts]=\"suburbTexts\" \r\n                            [settings]=\"suburbListSettings\" \r\n                            [(ngModel)]=\"selectedSuburbs\" >\r\n  </ss-multiselect-dropdown>\r\n</fieldset>\r\n</div>\r\n</div>\r\n\r\n<div class=\"room-price-search row\">\r\n  <div class=\"col-md-4\">\r\n<fieldset class=\"selector\">\r\n  <label>Bedrooms:</label><br/>\r\n  <select class=\"room-search-selector\" [(ngModel)]=\"minBedrooms\">\r\n    <option value=\"\" disabled hidden [value]=\"any\">Any</option>\r\n    <option *ngFor=\"let bedroom of bedroomOptions\" [ngValue]=\"bedroom\" [selected]=\"bedroom == 'Any'\">{{bedroom}}</option>\r\n  </select>\r\n  to\r\n  <select class=\"room-search-selector\" [(ngModel)]=\"maxBedrooms\">\r\n      <option value=\"\" disabled hidden [value]=\"any\">Any</option>\r\n    <option *ngFor=\"let bedroom of bedroomOptions\" [ngValue]=\"bedroom\">{{bedroom}}</option>\r\n  </select>\r\n</fieldset>\r\n  </div>\r\n<div class=\"col-md-4\">\r\n<fieldset class=\"selector\">\r\n  <label>Bathrooms:</label><br/>\r\n  <select class=\"room-search-selector\" [(ngModel)]=\"minBathrooms\">\r\n      <option value=\"\" disabled hidden [value]=\"any\">Any</option>\r\n    <option *ngFor=\"let bathroom of bathroomOptions\" [ngValue]=\"bathroom\">{{bathroom}}</option>\r\n  </select>\r\n  to\r\n  <select class=\"room-search-selector\" [(ngModel)]=\"maxBathrooms\" >\r\n      <option value=\"\" disabled hidden [value]=\"any\">Any</option>\r\n    <option *ngFor=\"let bathroom of bathroomOptions\" [ngValue]=\"bathroom\">{{bathroom}}</option>\r\n  </select>\r\n</fieldset>\r\n</div>\r\n<div class=\"col-md-4\">\r\n<fieldset class=\"selector\">\r\n  <label>Price:</label><br />\r\n  <select class=\"room-search-selector\" [(ngModel)]=\"minPrice\" >\r\n      <option value=\"\" disabled hidden [value]=\"any\">Any</option>\r\n      <option *ngFor=\"let price of priceOptions\" [ngValue]=\"price\">{{price | currency:'NZD':true:'1.2-2'}}</option>\r\n  </select>\r\n  to\r\n  <select class=\"room-search-selector\" [(ngModel)]=\"maxPrice\" >\r\n      <option value=\"\" disabled hidden [value]=\"any\">Any</option>\r\n      <option *ngFor=\"let price of priceOptions\" [ngValue]=\"price\">{{price | currency:'NZD':true:'1.2-2'}}</option>\r\n  </select>\r\n</fieldset>\r\n</div>\r\n</div>\r\n\r\n<div class=\"property-type-search row\">\r\n    <div class=\"col-md-4\">\r\n        <fieldset class=\"selector\">\r\n            <label>Property Type:</label><br />\r\n            <ss-multiselect-dropdown class=\"search-selector\" [options]=\"propertyTypeOptions\" [texts]=\"propertyTypeTexts\" [settings]=\"propertyTypeListSettings\" [(ngModel)]=\"selectedPropertyTypes\">\r\n            </ss-multiselect-dropdown>\r\n        </fieldset>\r\n    </div>\r\n    <div class=\"col-md-4\">\r\n        <fieldset class=\"selector\">\r\n            <label>Open Home Date:</label>\r\n            <my-date-picker name=\"mydate\" [options]=\"myDatePickerOptions\"\r\n                    (dateChanged)=\"onDateChanged($event)\"\r\n                    [(ngModel)]=\"model\"\r\n                    [selDate]=\"selectedDate\" required></my-date-picker>\r\n        </fieldset>\r\n    </div>\r\n    <div class=\"col-md-4\">\r\n        <fieldset class=\"selector\">\r\n            <label class=\"white\">Search</label><br/>\r\n            <button class=\"search-button btn btn-primary\" (click)=\"onSearch($event)\">Search</button>\r\n        </fieldset>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
-/***/ 262:
+/***/ 257:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(104);
+module.exports = __webpack_require__(102);
 
 
 /***/ }),
 
-/***/ 37:
+/***/ 36:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_delay__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_delay__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_delay___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_delay__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__ = __webpack_require__(215);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__(216);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_catch__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_catch__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_throw__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_throw__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_throw__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -889,10 +637,9 @@ var DataService = (function () {
     function DataService(http) {
         this.http = http;
         this.regionUrl = 'api/regions';
-        this.propertyUrl = 'api/properties';
+        this.propertyUrl = 'api/search';
     }
     DataService.prototype.getRegions = function () {
-        console.log('getregions');
         return this.http.get(this.regionUrl)
             .map(function (response) { return response.json().data; })
             .catch(function (error) {
@@ -918,11 +665,11 @@ var _a;
 
 /***/ }),
 
-/***/ 69:
+/***/ 70:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -942,7 +689,7 @@ var HomeComponent = (function () {
 }());
 HomeComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
-        template: __webpack_require__(209)
+        template: __webpack_require__(204)
     })
 ], HomeComponent);
 
@@ -950,11 +697,11 @@ HomeComponent = __decorate([
 
 /***/ }),
 
-/***/ 70:
+/***/ 71:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ResultsComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -977,7 +724,7 @@ var ResultsComponent = (function () {
 }());
 ResultsComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
-        template: __webpack_require__(210)
+        template: __webpack_require__(205)
     })
 ], ResultsComponent);
 
@@ -985,5 +732,5 @@ ResultsComponent = __decorate([
 
 /***/ })
 
-},[262]);
+},[257]);
 //# sourceMappingURL=main.bundle.js.map
